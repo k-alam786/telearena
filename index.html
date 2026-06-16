@@ -24,6 +24,7 @@ scroll-behavior:smooth;
 body{
 background:#f5f8fc;
 color:#222;
+line-height:1.6;
 }
 
 /* NAVBAR */
@@ -35,7 +36,7 @@ left:0;
 width:100%;
 background:#041c42;
 z-index:1000;
-box-shadow:0 2px 10px rgba(0,0,0,.2);
+box-shadow:0 2px 10px rgba(0,0,0,.25);
 }
 
 .nav-container{
@@ -44,13 +45,22 @@ margin:auto;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px 20px;
+padding:12px 20px;
 }
 
 .logo{
-color:#fff;
+display:flex;
+align-items:center;
+gap:10px;
+color:white;
 font-size:24px;
 font-weight:bold;
+}
+
+.logo img{
+height:50px;
+width:auto;
+border-radius:8px;
 }
 
 .nav-links a{
@@ -69,13 +79,13 @@ color:#00c8ff;
 .hero{
 height:100vh;
 background:
-linear-gradient(rgba(4,28,66,.85),rgba(4,28,66,.85)),
+linear-gradient(rgba(4,28,66,.88),rgba(4,28,66,.92)),
 url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=80');
 background-size:cover;
 background-position:center;
 display:flex;
-justify-content:center;
 align-items:center;
+justify-content:center;
 text-align:center;
 padding:20px;
 color:white;
@@ -86,8 +96,8 @@ max-width:900px;
 }
 
 .hero h1{
-font-size:60px;
-margin-bottom:20px;
+font-size:58px;
+margin-bottom:15px;
 }
 
 .hero h2{
@@ -97,7 +107,7 @@ margin-bottom:20px;
 }
 
 .hero p{
-font-size:18px;
+font-size:20px;
 margin-bottom:30px;
 }
 
@@ -109,6 +119,11 @@ color:white;
 text-decoration:none;
 border-radius:6px;
 font-weight:bold;
+margin:5px;
+}
+
+.btn2{
+background:#0b5ed7;
 }
 
 /* COMMON */
@@ -125,6 +140,29 @@ font-size:38px;
 margin-bottom:40px;
 color:#041c42;
 }
+
+/* STATS */
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.stat-box{
+background:white;
+padding:25px;
+border-radius:12px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.stat-box h3{
+color:#041c42;
+font-size:28px;
+}
+
+/* ABOUT */
 
 .about-box{
 background:white;
@@ -171,6 +209,8 @@ background:white;
 padding:25px;
 border-radius:12px;
 box-shadow:0 5px 15px rgba(0,0,0,.08);
+text-align:center;
+font-weight:bold;
 }
 
 /* CONTACT */
@@ -183,7 +223,8 @@ padding:80px 20px;
 }
 
 .contact p{
-margin-bottom:10px;
+margin-bottom:12px;
+font-size:18px;
 }
 
 /* FOOTER */
@@ -192,7 +233,7 @@ footer{
 background:#02112c;
 color:white;
 text-align:center;
-padding:20px;
+padding:25px;
 }
 
 /* WHATSAPP */
@@ -215,15 +256,27 @@ box-shadow:0 4px 10px rgba(0,0,0,.3);
 @media(max-width:768px){
 
 .hero h1{
-font-size:38px;
+font-size:36px;
 }
 
 .hero h2{
 font-size:22px;
 }
 
+.hero p{
+font-size:16px;
+}
+
 .nav-links{
 display:none;
+}
+
+.logo{
+font-size:18px;
+}
+
+.logo img{
+height:40px;
 }
 
 }
@@ -234,9 +287,13 @@ display:none;
 <body>
 
 <nav class="navbar">
+
 <div class="nav-container">
 
-<div class="logo">TeleArena</div>
+<div class="logo">
+<img src="logo.jpg" alt="TeleArena Logo">
+<span>TeleArena</span>
+</div>
 
 <div class="nav-links">
 <a href="#about">About</a>
@@ -247,6 +304,7 @@ display:none;
 </div>
 
 </div>
+
 </nav>
 
 <section class="hero">
@@ -263,6 +321,40 @@ LTE • 5G NR • IoT Testing • Protocol Analysis • Automation Framework Dev
 
 <a href="#contact" class="btn">Request Consultation</a>
 
+<a href="https://wa.me/918123833788" class="btn btn2">
+WhatsApp Us
+</a>
+
+</div>
+
+</section>
+
+<section class="container">
+
+<h2 class="section-title">Telecom Engineering Excellence</h2>
+
+<div class="stats">
+
+<div class="stat-box">
+<h3>10+ Years</h3>
+<p>Telecom Experience</p>
+</div>
+
+<div class="stat-box">
+<h3>LTE & 5G NR</h3>
+<p>Protocol Validation</p>
+</div>
+
+<div class="stat-box">
+<h3>Automation</h3>
+<p>Framework Development</p>
+</div>
+
+<div class="stat-box">
+<h3>IoT</h3>
+<p>NB-IoT & LTE-M Testing</p>
+</div>
+
 </div>
 
 </section>
@@ -274,11 +366,13 @@ LTE • 5G NR • IoT Testing • Protocol Analysis • Automation Framework Dev
 <div class="about-box">
 
 <p>
-
 TeleArena Cellular Services is a telecom engineering and testing organization specializing in LTE, 5G NR and IoT technologies.
+</p>
 
-We provide end-to-end device testing, protocol validation, automation framework development, network troubleshooting, drive testing and RF survey solutions for telecom operators, technology partners and device manufacturers.
+<br>
 
+<p>
+We provide end-to-end device testing, feature validation, protocol testing, automation framework development, network troubleshooting, drive testing and RF survey solutions for telecom operators, technology partners and device manufacturers.
 </p>
 
 </div>
@@ -292,42 +386,42 @@ We provide end-to-end device testing, protocol validation, automation framework 
 <div class="services">
 
 <div class="card">
-<h3>End-to-End Device Testing</h3>
+<h3>📱 End-to-End Device Testing</h3>
 <p>Validation of LTE, VoLTE, VoWiFi, 5G NR and IoT devices.</p>
 </div>
 
 <div class="card">
-<h3>Feature Testing</h3>
+<h3>🧪 Feature Testing</h3>
 <p>Verification of modem, network and interoperability features.</p>
 </div>
 
 <div class="card">
-<h3>Automation Framework Development</h3>
+<h3>🤖 Automation Framework Development</h3>
 <p>Network simulator control, modem control and automated reporting solutions.</p>
 </div>
 
 <div class="card">
-<h3>LTE & 5G NR Protocol Testing</h3>
+<h3>📡 LTE & 5G NR Protocol Testing</h3>
 <p>NAS, RRC, PDCP, RLC and MAC protocol validation.</p>
 </div>
 
 <div class="card">
-<h3>LTE / NR Call Flow Analysis</h3>
+<h3>🔍 LTE / NR Call Flow Analysis</h3>
 <p>Protocol-level troubleshooting and root cause analysis.</p>
 </div>
 
 <div class="card">
-<h3>Field Test & Drive Test</h3>
+<h3>🚗 Field Test & Drive Test</h3>
 <p>Coverage validation and network performance assessment.</p>
 </div>
 
 <div class="card">
-<h3>RF Survey</h3>
+<h3>📶 RF Survey & Optimization</h3>
 <p>Coverage planning, signal quality analysis and optimization.</p>
 </div>
 
 <div class="card">
-<h3>IoT Testing</h3>
+<h3>🌐 IoT Testing</h3>
 <p>NB-IoT and LTE-M validation and interoperability testing.</p>
 </div>
 
@@ -358,7 +452,9 @@ We provide end-to-end device testing, protocol validation, automation framework 
 
 <div class="about-box">
 
-<p>Supported engineering projects and validation activities for:</p>
+<p>
+Supported engineering projects and validation activities for:
+</p>
 
 <br>
 
@@ -383,14 +479,22 @@ We provide end-to-end device testing, protocol validation, automation framework 
 <p>📧 info@telearena.in</p>
 
 <p>
-📍 PLOT NO. 3/1, FLAT NO. 2 KANAN RESIDENCY,
-RAHATANI, PUNE,
+📍 PLOT NO. 3/1, FLAT NO. 2 KANAN RESIDENCY,<br>
+RAHATANI, PUNE,<br>
 Maharashtra, India – 411017
 </p>
 
 </section>
 
 <footer>
+
+TeleArena Cellular Services
+
+<br><br>
+
+Engineering Reliable Wireless Experiences
+
+<br><br>
 
 © 2026 TeleArena Cellular Services. All Rights Reserved.
 
