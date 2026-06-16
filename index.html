@@ -3,470 +3,192 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>TeleArena Cellular Services | LTE, 5G NR & IoT Testing</title>
-
-<meta name="description" content="TeleArena Cellular Services provides LTE, 5G NR, IoT testing, protocol validation, automation framework development, RF survey, drive testing and telecom consulting solutions.">
+<title>TeleArena Cellular Services</title>
+<meta name="description" content="LTE, 5G NR, IoT Testing, Protocol Validation and Automation Framework Development">
 
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Segoe UI, Arial, sans-serif;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
-body{
-background:#f4f7fb;
-color:#222;
-line-height:1.6;
-}
-
-/* NAVBAR */
+*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,Arial,sans-serif}
+html{scroll-behavior:smooth}
+body{background:#f4f7fb;color:#222;line-height:1.6}
 
 .navbar{
-position:fixed;
-top:0;
-width:100%;
-background:#041C42;
+position:fixed;top:0;width:100%;
+background:rgba(4,28,66,.95);
+backdrop-filter:blur(8px);
 z-index:1000;
-box-shadow:0 2px 10px rgba(0,0,0,.2);
 }
-
 .navwrap{
 max-width:1200px;
 margin:auto;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:18px 20px;
+padding:15px 20px;
 }
-
-.logo img{
-height:70px;
-width:auto;
-border-radius:8px;
-}
-
+.logo img{height:70px;width:auto;border-radius:8px}
 .nav a{
-color:white;
-text-decoration:none;
-margin-left:22px;
-font-size:16px;
-font-weight:500;
+color:#fff;text-decoration:none;margin-left:24px;
+font-weight:500
 }
-
-.nav a:hover{
-color:#00C8FF;
-}
-
-/* HERO */
+.nav a:hover{color:#00c8ff}
 
 .hero{
-height:100vh;
-
+min-height:85vh;
 background:
-linear-gradient(
-rgba(4,28,66,.88),
-rgba(4,28,66,.92)
-),
+linear-gradient(rgba(4,28,66,.94),rgba(4,28,66,.96)),
 url('hero.png');
-
 background-size:cover;
 background-position:center;
-
 display:flex;
-justify-content:center;
 align-items:center;
+justify-content:center;
 text-align:center;
-
 color:white;
-padding:20px;
+padding:120px 20px 60px;
 }
-
-.hero h1{
-font-size:60px;
-margin-bottom:15px;
-}
-
-.hero h2{
-font-size:28px;
-font-weight:300;
-margin-bottom:20px;
-}
-
-.hero p{
-max-width:900px;
-margin:auto;
-font-size:20px;
-}
+.hero h1{font-size:72px;margin-bottom:20px}
+.hero h2{font-size:30px;font-weight:300;margin-bottom:20px}
+.hero p{max-width:900px;font-size:22px;margin:auto}
 
 .btn{
 display:inline-block;
 margin-top:30px;
-padding:14px 30px;
-background:#00C853;
-color:white;
+padding:16px 34px;
+background:#00c853;
+color:#fff;
 text-decoration:none;
-border-radius:6px;
-font-weight:bold;
+border-radius:8px;
+font-weight:600;
+transition:.3s;
+}
+.btn:hover{
+transform:translateY(-2px);
+box-shadow:0 8px 20px rgba(0,200,83,.35);
 }
 
-/* COMMON */
-
-.container{
-max-width:1200px;
-margin:auto;
-padding:80px 20px;
-}
-
-.section-title{
-text-align:center;
-font-size:38px;
-color:#041C42;
-margin-bottom:40px;
-}
+.container{max-width:1200px;margin:auto;padding:80px 20px}
+.section-title{text-align:center;font-size:38px;color:#041c42;margin-bottom:40px}
 
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:25px;
 }
-
 .card{
-background:white;
+background:#fff;
 padding:30px;
 border-radius:12px;
 box-shadow:0 5px 15px rgba(0,0,0,.08);
-transition:.3s;
 }
-
-.card:hover{
-transform:translateY(-5px);
-}
-
-.card h3{
-color:#041C42;
-margin-bottom:10px;
-}
-
-/* STATS */
-
-.stats{
-background:white;
-}
-
-.stat-card{
-text-align:center;
-}
-
-.stat-card h2{
-font-size:40px;
-color:#0B5ED7;
-}
-
-/* ABOUT */
-
-.about{
-background:#f8fbff;
-}
-
-/* CONTACT */
+.card:hover{transform:translateY(-4px)}
+.card h3{color:#041c42}
 
 .contact{
-background:#041C42;
-color:white;
+background:#041c42;
+color:#fff;
 text-align:center;
 padding:90px 20px;
 }
-
-.contact p{
-font-size:20px;
-margin:12px 0;
-}
-
-/* FOOTER */
+.contact p{margin:12px 0;font-size:20px}
+.contact a{color:#fff;text-decoration:none}
 
 footer{
-background:#02112C;
-color:white;
+background:#02112c;
+color:#fff;
 text-align:center;
 padding:30px;
 }
-
-/* WHATSAPP */
 
 .whatsapp{
 position:fixed;
 right:20px;
 bottom:20px;
 background:#25D366;
-color:white;
+color:#fff;
 padding:15px 20px;
 border-radius:50px;
 text-decoration:none;
 font-weight:bold;
-box-shadow:0 4px 10px rgba(0,0,0,.3);
 }
-
-/* MOBILE */
 
 @media(max-width:768px){
-
-.hero h1{
-font-size:38px;
+.hero h1{font-size:42px}
+.hero h2{font-size:22px}
+.hero p{font-size:18px}
+.nav{display:none}
+.logo img{height:60px}
 }
-
-.hero h2{
-font-size:22px;
-}
-
-.nav{
-display:none;
-}
-
-.logo img{
-height:70px;
-}
-
-}
-
 </style>
 </head>
-
 <body>
-
-<!-- NAVBAR -->
 
 <nav class="navbar">
 <div class="navwrap">
-
-<div class="logo">
-<img src="logo.jpg" alt="TeleArena Cellular Services">
-</div>
-
+<div class="logo"><img src="logo.jpg" alt="TeleArena"></div>
 <div class="nav">
 <a href="#about">About</a>
 <a href="#services">Services</a>
 <a href="#experience">Experience</a>
 <a href="#contact">Contact</a>
 </div>
-
 </div>
 </nav>
 
-<!-- HERO -->
-
 <section class="hero">
-
 <div>
-
 <h1>TeleArena Cellular Services</h1>
-
-<h2>LTE • 5G NR • IoT • Automation • Protocol Testing</h2>
-
-<p>
-Engineering Reliable Wireless Experiences through advanced telecom testing,
-automation framework development, protocol analysis and network validation.
-</p>
-
-<a class="btn" href="#contact">
-Request Consultation
-</a>
-
+<h2>LTE • 5G NR • IoT • Device Validation • Automation Frameworks</h2>
+<p>Engineering Reliable Wireless Experiences through advanced telecom testing, automation framework development, protocol analysis and network validation.</p>
+<a class="btn" href="#contact">Request Consultation</a>
 </div>
-
 </section>
 
-<!-- STATS -->
-
-<section class="container stats">
-
-<h2 class="section-title">
-Telecom Engineering Excellence
-</h2>
-
-<div class="grid">
-
-<div class="card stat-card">
-<h2>10+</h2>
-<p>Years Telecom Experience</p>
-</div>
-
-<div class="card stat-card">
-<h2>LTE & 5G</h2>
-<p>Protocol Expertise</p>
-</div>
-
-<div class="card stat-card">
-<h2>Automation</h2>
-<p>Framework Development</p>
-</div>
-
-<div class="card stat-card">
-<h2>IoT</h2>
-<p>NB-IoT & LTE-M Testing</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- ABOUT -->
-
-<section id="about" class="container about">
-
+<section id="about" class="container">
 <h2 class="section-title">About TeleArena</h2>
-
 <div class="card">
-
-<p>
-
-TeleArena Cellular Services is a telecom engineering and testing company
-specializing in LTE, 5G NR and IoT technologies.
-
-We help operators, device vendors and technology partners validate wireless
-products through protocol testing, feature testing, network analysis,
-automation and field validation services.
-
-</p>
-
+TeleArena Cellular Services specializes in LTE, 5G NR and IoT technologies. We provide end-to-end device testing, protocol validation, feature testing, automation framework development, RF survey, drive testing and detailed LTE/NR call flow analysis.
 </div>
-
 </section>
-
-<!-- SERVICES -->
 
 <section id="services" class="container">
-
 <h2 class="section-title">Our Services</h2>
-
 <div class="grid">
-
-<div class="card">
-<h3>📱 End-to-End Device Testing</h3>
-<p>Comprehensive validation of cellular devices.</p>
+<div class="card"><h3>End-to-End Device Testing</h3></div>
+<div class="card"><h3>Feature Testing</h3></div>
+<div class="card"><h3>Automation Framework Development</h3></div>
+<div class="card"><h3>LTE & 5G NR Protocol Testing</h3></div>
+<div class="card"><h3>LTE / NR Log Analysis</h3></div>
+<div class="card"><h3>Field Test & Drive Test</h3></div>
+<div class="card"><h3>RF Survey</h3></div>
+<div class="card"><h3>IoT Testing</h3></div>
 </div>
-
-<div class="card">
-<h3>🧪 Feature Testing</h3>
-<p>Validation of LTE and 5G features.</p>
-</div>
-
-<div class="card">
-<h3>🤖 Automation Framework Development</h3>
-<p>Network simulator and modem automation.</p>
-</div>
-
-<div class="card">
-<h3>📡 LTE & 5G NR Protocol Testing</h3>
-<p>RRC, NAS and protocol validation.</p>
-</div>
-
-<div class="card">
-<h3>🔍 LTE / NR Log Analysis</h3>
-<p>Detailed end-to-end call flow analysis.</p>
-</div>
-
-<div class="card">
-<h3>🚗 Drive Test & Field Test</h3>
-<p>Network performance validation.</p>
-</div>
-
-<div class="card">
-<h3>📶 RF Survey</h3>
-<p>Coverage and optimization studies.</p>
-</div>
-
-<div class="card">
-<h3>🌐 IoT Testing</h3>
-<p>NB-IoT and LTE-M validation.</p>
-</div>
-
-</div>
-
 </section>
-
-<!-- EXPERIENCE -->
 
 <section id="experience" class="container">
-
 <h2 class="section-title">Industry Experience</h2>
-
 <div class="grid">
-
-<div class="card">
-<h3>Stentor Technologies</h3>
+<div class="card"><h3>✓ Stentor Technologies</h3></div>
+<div class="card"><h3>✓ IWS</h3></div>
+<div class="card"><h3>✓ MetroTel</h3></div>
 </div>
-
-<div class="card">
-<h3>IWS</h3>
-</div>
-
-<div class="card">
-<h3>MetroTel</h3>
-</div>
-
-</div>
-
 </section>
-
-<!-- CONTACT -->
 
 <section id="contact" class="contact">
-
 <h2>Contact Us</h2>
-
-<br>
-
-<p>📞 +91 8123833788</p>
-
-<p>📧 info@telearena.in</p>
-
-<p>
-📍 PLOT NO. 3/1, FLAT NO. 2 KANAN RESIDENCY,
-RAHATANI, PUNE,
-Maharashtra, India – 411017
-</p>
-
+<p>📞 <a href="tel:+918123833788">+91 8123833788</a></p>
+<p>📧 <a href="mailto:info@telearena.in">info@telearena.in</a></p>
+<p>📍 PLOT NO. 3/1, FLAT NO. 2 KANAN RESIDENCY, RAHATANI, PUNE, Maharashtra, India – 411017</p>
 </section>
 
-<!-- FOOTER -->
-
 <footer>
-
 <h3>TeleArena Cellular Services</h3>
-
+<p>Engineering Reliable Wireless Experiences</p>
+<p>LTE • 5G NR • IoT • Automation • Protocol Testing</p>
 <br>
-
-<p>
-Engineering Reliable Wireless Experiences
-</p>
-
-<p>
-LTE • 5G NR • IoT • Automation • Protocol Testing
-</p>
-
-<br>
-
-<p>
-© 2026 TeleArena Cellular Services. All Rights Reserved.
-</p>
-
+<p>© 2026 TeleArena Cellular Services. All Rights Reserved.</p>
 </footer>
 
-<!-- WHATSAPP -->
-
-<a class="whatsapp"
-href="https://wa.me/918123833788"
-target="_blank">
-WhatsApp
-</a>
+<a class="whatsapp" href="https://wa.me/918123833788" target="_blank">WhatsApp</a>
 
 </body>
 </html>
