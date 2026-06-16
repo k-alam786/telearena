@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>TeleArena Cellular Services | LTE, 5G NR & IoT Testing Solutions</title>
+<title>TeleArena Cellular Services | LTE, 5G NR & IoT Testing</title>
 
-<meta name="description" content="TeleArena Cellular Services provides LTE, 5G NR, IoT testing, protocol analysis, automation framework development, RF survey and drive testing solutions.">
+<meta name="description" content="TeleArena Cellular Services provides LTE, 5G NR, IoT testing, protocol validation, automation framework development, RF survey, drive testing and telecom consulting solutions.">
 
 <style>
 
@@ -14,7 +14,7 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Segoe UI',sans-serif;
+font-family:Segoe UI, Arial, sans-serif;
 }
 
 html{
@@ -22,7 +22,7 @@ scroll-behavior:smooth;
 }
 
 body{
-background:#f5f8fc;
+background:#f4f7fb;
 color:#222;
 line-height:1.6;
 }
@@ -32,98 +32,89 @@ line-height:1.6;
 .navbar{
 position:fixed;
 top:0;
-left:0;
 width:100%;
-background:#041c42;
+background:#041C42;
 z-index:1000;
-box-shadow:0 2px 10px rgba(0,0,0,.25);
+box-shadow:0 2px 10px rgba(0,0,0,.2);
 }
 
-.nav-container{
+.navwrap{
 max-width:1200px;
 margin:auto;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:12px 20px;
-}
-
-.logo{
-display:flex;
-align-items:center;
-gap:10px;
-color:white;
-font-size:24px;
-font-weight:bold;
+padding:18px 20px;
 }
 
 .logo img{
-height:50px;
+height:90px;
 width:auto;
 border-radius:8px;
 }
 
-.nav-links a{
+.nav a{
 color:white;
 text-decoration:none;
-margin-left:20px;
-font-size:15px;
+margin-left:22px;
+font-size:16px;
+font-weight:500;
 }
 
-.nav-links a:hover{
-color:#00c8ff;
+.nav a:hover{
+color:#00C8FF;
 }
 
 /* HERO */
 
 .hero{
 height:100vh;
+
 background:
-linear-gradient(rgba(4,28,66,.88),rgba(4,28,66,.92)),
+linear-gradient(
+rgba(4,28,66,.88),
+rgba(4,28,66,.92)
+),
 url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=80');
+
 background-size:cover;
 background-position:center;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-padding:20px;
-color:white;
-}
 
-.hero-content{
-max-width:900px;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+
+color:white;
+padding:20px;
 }
 
 .hero h1{
-font-size:58px;
+font-size:60px;
 margin-bottom:15px;
 }
 
 .hero h2{
-font-size:30px;
+font-size:28px;
 font-weight:300;
 margin-bottom:20px;
 }
 
 .hero p{
+max-width:900px;
+margin:auto;
 font-size:20px;
-margin-bottom:30px;
 }
 
 .btn{
 display:inline-block;
+margin-top:30px;
 padding:14px 30px;
-background:#00c853;
+background:#00C853;
 color:white;
 text-decoration:none;
 border-radius:6px;
 font-weight:bold;
-margin:5px;
-}
-
-.btn2{
-background:#0b5ed7;
 }
 
 /* COMMON */
@@ -137,45 +128,13 @@ padding:80px 20px;
 .section-title{
 text-align:center;
 font-size:38px;
+color:#041C42;
 margin-bottom:40px;
-color:#041c42;
 }
 
-/* STATS */
-
-.stats{
+.grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-}
-
-.stat-box{
-background:white;
-padding:25px;
-border-radius:12px;
-text-align:center;
-box-shadow:0 5px 15px rgba(0,0,0,.08);
-}
-
-.stat-box h3{
-color:#041c42;
-font-size:28px;
-}
-
-/* ABOUT */
-
-.about-box{
-background:white;
-padding:40px;
-border-radius:12px;
-box-shadow:0 5px 15px rgba(0,0,0,.08);
-}
-
-/* SERVICES */
-
-.services{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:25px;
 }
 
@@ -192,62 +151,66 @@ transform:translateY(-5px);
 }
 
 .card h3{
-color:#041c42;
+color:#041C42;
 margin-bottom:10px;
 }
 
-/* WHY */
+/* STATS */
 
-.why{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+.stats{
+background:white;
 }
 
-.why-item{
-background:white;
-padding:25px;
-border-radius:12px;
-box-shadow:0 5px 15px rgba(0,0,0,.08);
+.stat-card{
 text-align:center;
-font-weight:bold;
+}
+
+.stat-card h2{
+font-size:40px;
+color:#0B5ED7;
+}
+
+/* ABOUT */
+
+.about{
+background:#f8fbff;
 }
 
 /* CONTACT */
 
 .contact{
-background:#041c42;
+background:#041C42;
 color:white;
 text-align:center;
-padding:80px 20px;
+padding:90px 20px;
 }
 
 .contact p{
-margin-bottom:12px;
-font-size:18px;
+font-size:20px;
+margin:12px 0;
 }
 
 /* FOOTER */
 
 footer{
-background:#02112c;
+background:#02112C;
 color:white;
 text-align:center;
-padding:25px;
+padding:30px;
 }
 
 /* WHATSAPP */
 
 .whatsapp{
 position:fixed;
-bottom:25px;
-right:25px;
+right:20px;
+bottom:20px;
 background:#25D366;
 color:white;
 padding:15px 20px;
 border-radius:50px;
-font-weight:bold;
 text-decoration:none;
+font-weight:bold;
 box-shadow:0 4px 10px rgba(0,0,0,.3);
 }
 
@@ -256,27 +219,19 @@ box-shadow:0 4px 10px rgba(0,0,0,.3);
 @media(max-width:768px){
 
 .hero h1{
-font-size:36px;
+font-size:38px;
 }
 
 .hero h2{
 font-size:22px;
 }
 
-.hero p{
-font-size:16px;
-}
-
-.nav-links{
+.nav{
 display:none;
 }
 
-.logo{
-font-size:18px;
-}
-
 .logo img{
-height:40px;
+height:70px;
 }
 
 }
@@ -286,72 +241,75 @@ height:40px;
 
 <body>
 
-<nav class="navbar">
+<!-- NAVBAR -->
 
-<div class="nav-container">
+<nav class="navbar">
+<div class="navwrap">
 
 <div class="logo">
-<img src="logo.jpg" alt="TeleArena Logo">
-<span>TeleArena</span>
+<img src="logo.jpg" alt="TeleArena Cellular Services">
 </div>
 
-<div class="nav-links">
+<div class="nav">
 <a href="#about">About</a>
 <a href="#services">Services</a>
-<a href="#why">Why Us</a>
 <a href="#experience">Experience</a>
 <a href="#contact">Contact</a>
 </div>
 
 </div>
-
 </nav>
+
+<!-- HERO -->
 
 <section class="hero">
 
-<div class="hero-content">
+<div>
 
 <h1>TeleArena Cellular Services</h1>
 
-<h2>Engineering Reliable Wireless Experiences</h2>
+<h2>LTE • 5G NR • IoT • Automation • Protocol Testing</h2>
 
 <p>
-LTE • 5G NR • IoT Testing • Protocol Analysis • Automation Framework Development
+Engineering Reliable Wireless Experiences through advanced telecom testing,
+automation framework development, protocol analysis and network validation.
 </p>
 
-<a href="#contact" class="btn">Request Consultation</a>
-
-<a href="https://wa.me/918123833788" class="btn btn2">
-WhatsApp Us
+<a class="btn" href="#contact">
+Request Consultation
 </a>
 
 </div>
 
 </section>
 
-<section class="container">
+<!-- STATS -->
 
-<h2 class="section-title">Telecom Engineering Excellence</h2>
+<section class="container stats">
 
-<div class="stats">
+<h2 class="section-title">
+Telecom Engineering Excellence
+</h2>
 
-<div class="stat-box">
-<h3>10+ Years</h3>
-<p>Telecom Experience</p>
+<div class="grid">
+
+<div class="card stat-card">
+<h2>10+</h2>
+<p>Years Telecom Experience</p>
 </div>
 
-<div class="stat-box">
-<h3>LTE & 5G NR</h3>
-<p>Protocol Validation</p>
+<div class="card stat-card">
+<h2>LTE & 5G</h2>
+<p>Protocol Expertise</p>
 </div>
 
-<div class="stat-box">
-<h3>Automation</h3>
+<div class="card stat-card">
+<h2>Automation</h2>
 <p>Framework Development</p>
 </div>
 
-<div class="stat-box">
-<h3>IoT</h3>
+<div class="card stat-card">
+<h2>IoT</h2>
 <p>NB-IoT & LTE-M Testing</p>
 </div>
 
@@ -359,114 +317,106 @@ WhatsApp Us
 
 </section>
 
-<section id="about" class="container">
+<!-- ABOUT -->
+
+<section id="about" class="container about">
 
 <h2 class="section-title">About TeleArena</h2>
 
-<div class="about-box">
+<div class="card">
 
 <p>
-TeleArena Cellular Services is a telecom engineering and testing organization specializing in LTE, 5G NR and IoT technologies.
-</p>
 
-<br>
+TeleArena Cellular Services is a telecom engineering and testing company
+specializing in LTE, 5G NR and IoT technologies.
 
-<p>
-We provide end-to-end device testing, feature validation, protocol testing, automation framework development, network troubleshooting, drive testing and RF survey solutions for telecom operators, technology partners and device manufacturers.
+We help operators, device vendors and technology partners validate wireless
+products through protocol testing, feature testing, network analysis,
+automation and field validation services.
+
 </p>
 
 </div>
 
 </section>
 
+<!-- SERVICES -->
+
 <section id="services" class="container">
 
-<h2 class="section-title">Core Services</h2>
+<h2 class="section-title">Our Services</h2>
 
-<div class="services">
+<div class="grid">
 
 <div class="card">
 <h3>📱 End-to-End Device Testing</h3>
-<p>Validation of LTE, VoLTE, VoWiFi, 5G NR and IoT devices.</p>
+<p>Comprehensive validation of cellular devices.</p>
 </div>
 
 <div class="card">
 <h3>🧪 Feature Testing</h3>
-<p>Verification of modem, network and interoperability features.</p>
+<p>Validation of LTE and 5G features.</p>
 </div>
 
 <div class="card">
 <h3>🤖 Automation Framework Development</h3>
-<p>Network simulator control, modem control and automated reporting solutions.</p>
+<p>Network simulator and modem automation.</p>
 </div>
 
 <div class="card">
 <h3>📡 LTE & 5G NR Protocol Testing</h3>
-<p>NAS, RRC, PDCP, RLC and MAC protocol validation.</p>
+<p>RRC, NAS and protocol validation.</p>
 </div>
 
 <div class="card">
-<h3>🔍 LTE / NR Call Flow Analysis</h3>
-<p>Protocol-level troubleshooting and root cause analysis.</p>
+<h3>🔍 LTE / NR Log Analysis</h3>
+<p>Detailed end-to-end call flow analysis.</p>
 </div>
 
 <div class="card">
-<h3>🚗 Field Test & Drive Test</h3>
-<p>Coverage validation and network performance assessment.</p>
+<h3>🚗 Drive Test & Field Test</h3>
+<p>Network performance validation.</p>
 </div>
 
 <div class="card">
-<h3>📶 RF Survey & Optimization</h3>
-<p>Coverage planning, signal quality analysis and optimization.</p>
+<h3>📶 RF Survey</h3>
+<p>Coverage and optimization studies.</p>
 </div>
 
 <div class="card">
 <h3>🌐 IoT Testing</h3>
-<p>NB-IoT and LTE-M validation and interoperability testing.</p>
+<p>NB-IoT and LTE-M validation.</p>
 </div>
 
 </div>
 
 </section>
 
-<section id="why" class="container">
-
-<h2 class="section-title">Why Choose TeleArena</h2>
-
-<div class="why">
-
-<div class="why-item">LTE & 5G Expertise</div>
-<div class="why-item">Automation First Approach</div>
-<div class="why-item">Protocol-Level Analysis</div>
-<div class="why-item">Field & Lab Validation</div>
-<div class="why-item">Rapid Issue Resolution</div>
-<div class="why-item">End-to-End Test Coverage</div>
-
-</div>
-
-</section>
+<!-- EXPERIENCE -->
 
 <section id="experience" class="container">
 
 <h2 class="section-title">Industry Experience</h2>
 
-<div class="about-box">
+<div class="grid">
 
-<p>
-Supported engineering projects and validation activities for:
-</p>
+<div class="card">
+<h3>Stentor Technologies</h3>
+</div>
 
-<br>
+<div class="card">
+<h3>IWS</h3>
+</div>
 
-<ul>
-<li>Stentor Technologies</li>
-<li>IWS</li>
-<li>MetroTel</li>
-</ul>
+<div class="card">
+<h3>MetroTel</h3>
+</div>
 
 </div>
 
 </section>
+
+<!-- CONTACT -->
 
 <section id="contact" class="contact">
 
@@ -479,29 +429,42 @@ Supported engineering projects and validation activities for:
 <p>📧 info@telearena.in</p>
 
 <p>
-📍 PLOT NO. 3/1, FLAT NO. 2 KANAN RESIDENCY,<br>
-RAHATANI, PUNE,<br>
+📍 PLOT NO. 3/1, FLAT NO. 2 KANAN RESIDENCY,
+RAHATANI, PUNE,
 Maharashtra, India – 411017
 </p>
 
 </section>
 
+<!-- FOOTER -->
+
 <footer>
 
-TeleArena Cellular Services
+<h3>TeleArena Cellular Services</h3>
 
-<br><br>
+<br>
 
+<p>
 Engineering Reliable Wireless Experiences
+</p>
 
-<br><br>
+<p>
+LTE • 5G NR • IoT • Automation • Protocol Testing
+</p>
 
+<br>
+
+<p>
 © 2026 TeleArena Cellular Services. All Rights Reserved.
+</p>
 
 </footer>
 
+<!-- WHATSAPP -->
+
 <a class="whatsapp"
-href="https://wa.me/918123833788">
+href="https://wa.me/918123833788"
+target="_blank">
 WhatsApp
 </a>
 
