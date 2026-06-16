@@ -1,15 +1,338 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TeleArena Cellular Services</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI, Arial, sans-serif;
+}
+
+body{
+background:#f5f7fb;
+color:#222;
+line-height:1.6;
+}
+
+header{
+background:linear-gradient(135deg,#062c5c,#0b5ed7);
+color:white;
+padding:90px 20px;
+text-align:center;
+}
+
+header h1{
+font-size:48px;
+margin-bottom:15px;
+}
+
+header p{
+font-size:22px;
+margin-bottom:25px;
+}
+
+.btn{
+display:inline-block;
+padding:12px 28px;
+background:#00c853;
+color:white;
+text-decoration:none;
+border-radius:6px;
+font-weight:bold;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:60px 20px;
+}
+
+.section-title{
+text-align:center;
+font-size:34px;
+margin-bottom:40px;
+color:#0b3d91;
+}
+
+.clients{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+}
+
+.client-box{
+background:white;
+padding:25px;
+text-align:center;
+border-radius:10px;
+box-shadow:0 2px 10px rgba(0,0,0,0.08);
+font-weight:bold;
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 2px 10px rgba(0,0,0,0.08);
+}
+
+.card h3{
+color:#0b3d91;
+margin-bottom:12px;
+}
+
+.tech-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.tech-box{
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 2px 10px rgba(0,0,0,0.08);
+}
+
+.tech-box h3{
+color:#0b3d91;
+margin-bottom:10px;
+}
+
+.about{
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 2px 10px rgba(0,0,0,0.08);
+}
+
+.contact{
+background:#062c5c;
+color:white;
+text-align:center;
+padding:60px 20px;
+}
+
+.contact h2{
+margin-bottom:20px;
+}
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+</style>
+
 </head>
-<body style="font-family:Arial;text-align:center;padding:40px">
+
+<body>
+
+<header>
 <h1>TeleArena Cellular Services</h1>
-<h3>Enterprise IT & Telecom Solutions</h3>
-<p>LTE | VoLTE | 5G NR Network Analysis & Consulting</p>
-<p>Reliable IT services for telecom industry excellence.</p>
-<p>📍 Rahatani, Pune 411017</p>
-<p>📞 8123833788</p>
+<p>LTE • 5G NR • IoT Testing • Telecom Automation Solutions</p>
+
+<a href="tel:+918123833788" class="btn">
+Contact Us
+</a>
+</header>
+
+<section class="container">
+
+<h2 class="section-title">Trusted By</h2>
+
+<div class="clients">
+
+<div class="client-box">Vodafone Idea (Vi)</div>
+
+<div class="client-box">Stentor Technologies</div>
+
+<div class="client-box">IWS</div>
+
+<div class="client-box">MetroTel</div>
+
+</div>
+
+</section>
+
+<section class="container">
+
+<h2 class="section-title">About TeleArena</h2>
+
+<div class="about">
+
+<p>
+TeleArena Cellular Services is a telecom engineering and testing organization specializing in LTE, 5G NR and IoT technologies.
+We provide end-to-end device validation, protocol testing, automation framework development and network troubleshooting services
+for telecom operators, technology companies and device vendors.
+</p>
+
+</div>
+
+</section>
+
+<section class="container">
+
+<h2 class="section-title">Core Services</h2>
+
+<div class="services">
+
+<div class="card">
+<h3>End-to-End Device Testing</h3>
+<p>Comprehensive validation of LTE, VoLTE, VoWiFi, 5G NR and IoT devices.</p>
+</div>
+
+<div class="card">
+<h3>Feature Testing</h3>
+<p>Validation of modem and network features, interoperability testing and regression verification.</p>
+</div>
+
+<div class="card">
+<h3>Automation Framework Development</h3>
+<p>Custom frameworks for Network Simulator Control, Modem Control, Test Automation and Reporting.</p>
+</div>
+
+<div class="card">
+<h3>LTE & 5G NR Protocol Testing</h3>
+<p>NAS, RRC, PDCP, RLC, MAC layer validation and protocol analysis.</p>
+</div>
+
+<div class="card">
+<h3>Call Flow Log Analysis</h3>
+<p>Deep analysis of LTE and NR call flows, failures, mobility issues and throughput degradation.</p>
+</div>
+
+<div class="card">
+<h3>Field Test & Drive Test</h3>
+<p>Coverage validation, mobility testing, benchmarking and network performance analysis.</p>
+</div>
+
+<div class="card">
+<h3>RF Survey</h3>
+<p>Coverage assessment, signal quality analysis and optimization recommendations.</p>
+</div>
+
+<div class="card">
+<h3>IoT Testing</h3>
+<p>NB-IoT and LTE-M validation, interoperability and connectivity testing.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="container">
+
+<h2 class="section-title">Technology Expertise</h2>
+
+<div class="tech-grid">
+
+<div class="tech-box">
+<h3>LTE</h3>
+<ul>
+<li>Attach Procedures</li>
+<li>VoLTE</li>
+<li>Carrier Aggregation</li>
+<li>Mobility Testing</li>
+</ul>
+</div>
+
+<div class="tech-box">
+<h3>5G NR</h3>
+<ul>
+<li>NSA & SA</li>
+<li>EN-DC</li>
+<li>VoNR</li>
+<li>Registration & Mobility</li>
+</ul>
+</div>
+
+<div class="tech-box">
+<h3>IoT</h3>
+<ul>
+<li>NB-IoT</li>
+<li>LTE-M</li>
+<li>Device Validation</li>
+<li>Connectivity Testing</li>
+</ul>
+</div>
+
+</div>
+
+</section>
+
+<section class="container">
+
+<h2 class="section-title">Tools & Platforms</h2>
+
+<div class="services">
+
+<div class="card">
+<h3>Network Simulators</h3>
+<p>Amarisoft, Keysight UXM, Anritsu MD8475A, Rohde & Schwarz CMW500</p>
+</div>
+
+<div class="card">
+<h3>Analysis Tools</h3>
+<p>Wireshark, QXDM, Protocol Debugging, Log Analysis</p>
+</div>
+
+<div class="card">
+<h3>Automation</h3>
+<p>Python, Pytest, Robot Framework, Custom Telecom Automation Solutions</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="contact">
+
+<h2>Contact TeleArena</h2>
+
+<p>📍 Pune, Maharashtra, India</p>
+
+<p>📞 +91 8123833788</p>
+
+<p>📧 info@telearena.in</p>
+
+<p>Delivering reliable telecom testing and automation solutions for next-generation wireless technologies.</p>
+
+</section>
+
+<footer>
+© 2026 TeleArena Cellular Services. All Rights Reserved.
+</footer>
+
+<a class="whatsapp" href="https://wa.me/918123833788">
+WhatsApp
+</a>
+
 </body>
 </html>
