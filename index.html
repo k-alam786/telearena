@@ -3,191 +3,636 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>TeleArena Cellular Services</title>
-<meta name="description" content="LTE, 5G NR, IoT Testing, Protocol Validation and Automation Framework Development">
+
+<meta name="description" content="TeleArena Cellular Services - LTE, 5G NR, IoT Testing, Protocol Validation, RF Survey, Drive Testing and Automation Framework Development">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,Arial,sans-serif}
-html{scroll-behavior:smooth}
-body{background:#f8fafc;color:#222;line-height:1.6}
 
-.navbar{
-position:fixed;top:0;width:100%;
-background:rgba(4,28,66,.95);
-backdrop-filter:blur(8px);
-z-index:1000;
-}
-.navwrap{
-max-width:1200px;
-margin:auto;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 20px;
-}
-.logo img{height:50px;width:auto;border-radius:5px}
-.nav a{
-color:#fff;text-decoration:none;margin-left:24px;
-font-weight:500
-}
-.nav a:hover{color:#00c8ff}
+/* =========================
+   GLOBAL
+========================= */
 
-.hero{
-min-height:100vh;
-background:
-linear-gradient(rgba(4,28,66,.85),rgba(4,28,66,.90)),
-url('hero.png');
-background-size:cover;
-background-position:75% center;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-color:white;
-padding:120px 20px 60px;
-}
-.hero h1{font-size:72px;margin-bottom:20px}
-.hero h2{font-size:30px;font-weight:300;margin-bottom:20px}
-.hero p{max-width:900px;font-size:22px;margin:auto}
-
-.btn{
-display:inline-block;
-margin-top:30px;
-padding:16px 34px;
-background:#00c853;
-color:#fff;
-text-decoration:none;
-border-radius:8px;
-font-weight:600;
-transition:.3s;
-}
-.btn:hover{
-transform:translateY(-2px);
-box-shadow:0 8px 20px rgba(0,200,83,.35);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
 }
 
-.container{max-width:1200px;margin:auto;padding:80px 20px}
-.section-title{text-align:center;font-size:38px;color:#041c42;margin-bottom:40px}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-.card{
-background:#fff;
-padding:30px;
-border-radius:12px;
-box-shadow:0 5px 15px rgba(0,0,0,.08);
-}
-.card:hover{transform:translateY(-4px)}
-.card h3{color:#041c42}
-
-.contact{
-background:#041c42;
-color:#fff;
-text-align:center;
-padding:90px 20px;
-}
-.contact p{margin:12px 0;font-size:20px}
-.contact a{color:#fff;text-decoration:none}
-
-footer{
-background:#02112c;
-color:#fff;
-text-align:center;
-padding:30px;
+html {
+    scroll-behavior: smooth;
 }
 
-.whatsapp{
-position:fixed;
-right:20px;
-bottom:20px;
-background:#25D366;
-color:#fff;
-padding:15px 20px;
-border-radius:50px;
-text-decoration:none;
-font-weight:bold;
+body {
+    background: #f8fafc;
+    color: #222;
+    line-height: 1.6;
 }
 
-@media(max-width:768px){
-.hero h1{font-size:42px}
-.hero h2{font-size:22px}
-.hero p{font-size:18px}
-.nav{display:none}
-.logo img{height:60px}
+
+/* =========================
+   NAVIGATION BAR
+========================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    z-index: 1000;
 }
+
+.navwrap {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo img {
+    height: 55px;
+    width: auto;
+    display: block;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav a {
+    color: #041c42;
+    text-decoration: none;
+    margin-left: 28px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: #00aeea;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            rgba(4, 28, 66, 0.84),
+            rgba(4, 28, 66, 0.90)
+        ),
+        url("hero.png");
+
+    background-size: cover;
+    background-position: 75% center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    color: white;
+
+    padding: 130px 20px 70px;
+}
+
+.hero h1 {
+    font-size: 68px;
+    line-height: 1.15;
+    margin-bottom: 22px;
+}
+
+.hero h2 {
+    font-size: 29px;
+    font-weight: 300;
+    margin-bottom: 22px;
+}
+
+.hero p {
+    max-width: 900px;
+    font-size: 21px;
+    margin: auto;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn {
+    display: inline-block;
+    margin-top: 32px;
+
+    padding: 15px 34px;
+
+    background: #00b8f2;
+    color: #fff;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #009fd4;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 184, 242, 0.35);
+}
+
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 85px 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 38px;
+    color: #041c42;
+    margin-bottom: 42px;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(250px, 1fr)
+    );
+
+    gap: 25px;
+}
+
+.card {
+    background: #ffffff;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.07);
+
+    transition: 0.3s;
+
+    border: 1px solid #edf1f5;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.10);
+}
+
+.card h3 {
+    color: #041c42;
+}
+
+
+/* =========================
+   CONTACT SECTION
+========================= */
+
+.contact {
+    background: #041c42;
+
+    color: #fff;
+
+    text-align: center;
+
+    padding: 90px 20px;
+}
+
+.contact h2 {
+    font-size: 38px;
+    margin-bottom: 25px;
+}
+
+.contact p {
+    margin: 12px 0;
+    font-size: 19px;
+}
+
+.contact a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    color: #00c8ff;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #02112c;
+
+    color: #fff;
+
+    text-align: center;
+
+    padding: 30px 20px;
+}
+
+footer h3 {
+    margin-bottom: 8px;
+}
+
+footer p {
+    margin: 4px 0;
+}
+
+
+/* =========================
+   WHATSAPP BUTTON
+========================= */
+
+.whatsapp {
+    position: fixed;
+
+    right: 20px;
+    bottom: 20px;
+
+    background: #25D366;
+    color: #fff;
+
+    padding: 14px 20px;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.20);
+
+    z-index: 999;
+}
+
+.whatsapp:hover {
+    background: #1ebe5d;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .navwrap {
+        padding: 8px 15px;
+    }
+
+    .logo img {
+        height: 48px;
+    }
+
+    .nav a {
+        margin-left: 14px;
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 120px 20px 60px;
+        background-position: center;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero h2 {
+        font-size: 21px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+
+    .container {
+        padding: 65px 20px;
+    }
+
+    .contact h2 {
+        font-size: 32px;
+    }
+
+    .contact p {
+        font-size: 17px;
+    }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+    .navwrap {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .nav a {
+        margin-left: 8px;
+        margin-right: 8px;
+        font-size: 13px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero h2 {
+        font-size: 18px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .btn {
+        padding: 13px 25px;
+    }
+
+    .whatsapp {
+        right: 12px;
+        bottom: 12px;
+        padding: 12px 17px;
+    }
+}
+
 </style>
 </head>
+
+
 <body>
 
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
 <nav class="navbar">
-<div class="navwrap">
-<div class="logo"><img src="logo.png" alt="TeleArena"></div>
-<div class="nav">
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#experience">Experience</a>
-<a href="#contact">Contact</a>
-</div>
-</div>
+
+    <div class="navwrap">
+
+        <div class="logo">
+            <img src="logo.png" alt="TeleArena Cellular Services">
+        </div>
+
+        <div class="nav">
+
+            <a href="#about">About</a>
+
+            <a href="#services">Services</a>
+
+            <a href="#experience">Experience</a>
+
+            <a href="#contact">Contact</a>
+
+        </div>
+
+    </div>
+
 </nav>
 
+
+<!-- =========================
+     HERO
+========================= -->
+
 <section class="hero">
-<div>
-<h1>TeleArena Cellular Services</h1>
-<h2>LTE • 5G NR • IoT • Device Validation • Automation Frameworks</h2>
-<p>Engineering Reliable Wireless Experiences through advanced telecom testing, automation framework development, protocol analysis and network validation.</p>
-<a class="btn" href="#contact">Request Consultation</a>
-</div>
+
+    <div>
+
+        <h1>TeleArena Cellular Services</h1>
+
+        <h2>
+            LTE • 5G NR • IoT • Device Validation • Automation Frameworks
+        </h2>
+
+        <p>
+            Engineering Reliable Wireless Experiences through advanced
+            telecom testing, automation framework development, protocol
+            analysis and network validation.
+        </p>
+
+        <a class="btn" href="#contact">
+            Request Consultation
+        </a>
+
+    </div>
+
 </section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
 
 <section id="about" class="container">
-<h2 class="section-title">About TeleArena</h2>
-<div class="card">
-TeleArena Cellular Services specializes in LTE, 5G NR and IoT technologies. We provide end-to-end device testing, protocol validation, feature testing, automation framework development, RF survey, drive testing and detailed LTE/NR call flow analysis.
-</div>
+
+    <h2 class="section-title">
+        About TeleArena
+    </h2>
+
+    <div class="card">
+
+        <p>
+            TeleArena Cellular Services specializes in LTE, 5G NR and IoT
+            technologies. We provide end-to-end device testing, protocol
+            validation, feature testing, automation framework development,
+            RF survey, drive testing and detailed LTE/NR call flow analysis.
+        </p>
+
+    </div>
+
 </section>
+
+
+<!-- =========================
+     SERVICES
+========================= -->
 
 <section id="services" class="container">
-<h2 class="section-title">Our Services</h2>
-<div class="grid">
-<div class="card"><h3>End-to-End Device Testing</h3></div>
-<div class="card"><h3>Feature Testing</h3></div>
-<div class="card"><h3>Automation Framework Development</h3></div>
-<div class="card"><h3>LTE & 5G NR Protocol Testing</h3></div>
-<div class="card"><h3>LTE / NR Log Analysis</h3></div>
-<div class="card"><h3>Field Test & Drive Test</h3></div>
-<div class="card"><h3>RF Survey</h3></div>
-<div class="card"><h3>IoT Testing</h3></div>
-</div>
+
+    <h2 class="section-title">
+        Our Services
+    </h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>End-to-End Device Testing</h3>
+        </div>
+
+        <div class="card">
+            <h3>Feature Testing</h3>
+        </div>
+
+        <div class="card">
+            <h3>Automation Framework Development</h3>
+        </div>
+
+        <div class="card">
+            <h3>LTE &amp; 5G NR Protocol Testing</h3>
+        </div>
+
+        <div class="card">
+            <h3>LTE / NR Log Analysis</h3>
+        </div>
+
+        <div class="card">
+            <h3>Field Test &amp; Drive Test</h3>
+        </div>
+
+        <div class="card">
+            <h3>RF Survey</h3>
+        </div>
+
+        <div class="card">
+            <h3>IoT Testing</h3>
+        </div>
+
+    </div>
+
 </section>
+
+
+<!-- =========================
+     EXPERIENCE
+========================= -->
 
 <section id="experience" class="container">
-<h2 class="section-title">Industry Experience</h2>
-<div class="grid">
-<div class="card"><h3>✓ Stentor Technologies</h3></div>
-<div class="card"><h3>✓ Vi</h3></div>
-</div>
+
+    <h2 class="section-title">
+        Industry Experience
+    </h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>✓ Stentor Technologies</h3>
+        </div>
+
+        <div class="card">
+            <h3>✓ Vi</h3>
+        </div>
+
+    </div>
+
 </section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
 
 <section id="contact" class="contact">
-<h2>Contact Us</h2>
-<p>📞 <a href="tel:+918888833622">+91 8888833622</a></p>
-<p>📧 <a href="mailto:info@telearena.in">info@telearena.in</a></p>
-<p>📍 PLOT NO. 3/1, FLAT NO. 2 KANAN RESIDENCY, RAHATANI, PUNE, Maharashtra, India – 411017</p>
+
+    <h2>
+        Contact Us
+    </h2>
+
+    <p>
+        📞
+        <a href="tel:+918888833622">
+            +91 8888833622
+        </a>
+    </p>
+
+    <p>
+        📧
+        <a href="mailto:info@telearena.in">
+            info@telearena.in
+        </a>
+    </p>
+
+    <p>
+        📍 PLOT NO. 3/1, FLAT NO. 2 KANAN RESIDENCY,
+        RAHATANI, PUNE, Maharashtra, India – 411017
+    </p>
+
 </section>
 
+
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
-<h3>TeleArena Cellular Services</h3>
-<p>Engineering Reliable Wireless Experiences</p>
-<p>LTE • 5G NR • IoT • Automation • Protocol Testing</p>
-<br>
-<p>© 2026 TeleArena Cellular Services. All Rights Reserved.</p>
+
+    <h3>
+        TeleArena Cellular Services
+    </h3>
+
+    <p>
+        Engineering Reliable Wireless Experiences
+    </p>
+
+    <p>
+        LTE • 5G NR • IoT • Automation • Protocol Testing
+    </p>
+
+    <br>
+
+    <p>
+        © 2026 TeleArena Cellular Services.
+        All Rights Reserved.
+    </p>
+
 </footer>
 
-<a class="whatsapp" href="https://wa.me/918888833622" target="_blank">WhatsApp</a>
+
+<!-- =========================
+     WHATSAPP
+========================= -->
+
+<a
+    class="whatsapp"
+    href="https://wa.me/918888833622"
+    target="_blank"
+    rel="noopener noreferrer"
+>
+    WhatsApp
+</a>
+
 
 </body>
 </html>
