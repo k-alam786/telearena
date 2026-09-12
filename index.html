@@ -5,10 +5,7 @@
 
     <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta
         name="description"
@@ -20,11 +17,12 @@
         content="LTE Testing, 5G NR Testing, Telecom Testing, Protocol Testing, IoT Testing, RF Testing, Drive Test, Automation, TeleArena"
     >
 
-    <meta name="author" content="TeleArena Cellular Services">
+    <meta
+        name="author"
+        content="TeleArena Cellular Services"
+    >
 
-    <title>
-        TeleArena Cellular Services
-    </title>
+    <title>TeleArena Cellular Services</title>
 
 
     <style>
@@ -39,44 +37,29 @@
             box-sizing: border-box;
         }
 
-
         html {
             scroll-behavior: smooth;
         }
 
-
         body {
-
             background: #f8fafc;
-
             color: #222;
-
             line-height: 1.6;
-
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
         }
-
 
         a {
             text-decoration: none;
         }
-
 
         img {
             max-width: 100%;
             display: block;
         }
 
-
         .container {
-
             width: 90%;
-
             max-width: 1200px;
-
             margin: auto;
         }
 
@@ -86,15 +69,10 @@
         ========================================================= */
 
         .navbar {
-
             position: fixed;
-
             top: 0;
-
             left: 0;
-
             width: 100%;
-
             height: 76px;
 
             background: rgba(255, 255, 255, 0.96);
@@ -109,57 +87,36 @@
             z-index: 1000;
         }
 
-
         .nav-container {
-
             width: 90%;
-
             max-width: 1200px;
-
             height: 100%;
-
             margin: auto;
 
             display: flex;
-
             align-items: center;
-
             justify-content: space-between;
         }
 
-
         .logo {
-
             display: flex;
-
             align-items: center;
         }
 
-
         .logo img {
-
             width: 175px;
-
             height: auto;
         }
 
-
         .nav {
-
             display: flex;
-
             align-items: center;
-
             gap: 30px;
         }
 
-
         .nav a {
-
             color: #041c42;
-
             font-size: 15px;
-
             font-weight: 600;
 
             position: relative;
@@ -167,19 +124,14 @@
             transition: color 0.25s ease;
         }
 
-
         .nav a::after {
-
             content: "";
 
             position: absolute;
-
             left: 0;
-
             bottom: -7px;
 
             width: 0;
-
             height: 2px;
 
             background: #00b8f2;
@@ -187,15 +139,11 @@
             transition: width 0.25s ease;
         }
 
-
         .nav a:hover {
-
             color: #009fd4;
         }
 
-
         .nav a:hover::after {
-
             width: 100%;
         }
 
@@ -205,32 +153,25 @@
         ========================================================= */
 
         .hero {
-
             min-height: 100vh;
 
             position: relative;
-
             overflow: hidden;
 
             background:
-
                 linear-gradient(
                     110deg,
                     rgba(3, 22, 52, 0.96) 0%,
                     rgba(4, 38, 82, 0.88) 48%,
                     rgba(0, 115, 170, 0.62) 100%
                 ),
-
                 url("hero.png");
 
             background-size: cover;
-
             background-position: center;
 
             display: flex;
-
             align-items: center;
-
             justify-content: center;
 
             text-align: center;
@@ -240,91 +181,64 @@
             padding: 140px 20px 80px;
         }
 
-
         .hero::before {
-
             content: "";
 
             position: absolute;
 
             width: 650px;
-
             height: 650px;
 
             right: -220px;
-
             top: 80px;
 
             border-radius: 50%;
 
-            border: 1px solid
-                rgba(0, 200, 255, 0.18);
+            border: 1px solid rgba(0, 200, 255, 0.18);
 
             box-shadow:
-
-                0 0 0 70px
-                    rgba(0, 200, 255, 0.035),
-
-                0 0 0 140px
-                    rgba(0, 200, 255, 0.025),
-
-                0 0 0 210px
-                    rgba(0, 200, 255, 0.018);
+                0 0 0 70px rgba(0, 200, 255, 0.035),
+                0 0 0 140px rgba(0, 200, 255, 0.025),
+                0 0 0 210px rgba(0, 200, 255, 0.018);
 
             pointer-events: none;
         }
 
-
         .hero-content {
-
             position: relative;
-
             z-index: 2;
 
             max-width: 1050px;
-
             margin: auto;
         }
 
-
         .hero-tag {
-
             display: inline-flex;
-
             align-items: center;
-
             gap: 9px;
 
             padding: 8px 16px;
-
             margin-bottom: 24px;
 
-            border: 1px solid
-                rgba(0, 200, 255, 0.35);
+            border: 1px solid rgba(0, 200, 255, 0.35);
 
             border-radius: 30px;
 
-            background:
-                rgba(0, 200, 255, 0.08);
+            background: rgba(0, 200, 255, 0.08);
 
             color: #63dcff;
 
             font-size: 13px;
-
             font-weight: 600;
 
             letter-spacing: 1.2px;
-
             text-transform: uppercase;
         }
 
-
         .hero-tag::before {
-
             content: "";
 
             width: 7px;
-
             height: 7px;
 
             border-radius: 50%;
@@ -332,15 +246,11 @@
             background: #00c8ff;
 
             box-shadow:
-                0 0 10px
-                rgba(0, 200, 255, 0.9);
+                0 0 10px rgba(0, 200, 255, 0.9);
         }
 
-
         .hero h1 {
-
-            font-size:
-                clamp(45px, 6vw, 76px);
+            font-size: clamp(45px, 6vw, 76px);
 
             line-height: 1.08;
 
@@ -351,19 +261,13 @@
             letter-spacing: -1.5px;
         }
 
-
         .hero h1 span {
-
             display: block;
-
             color: #00c8ff;
         }
 
-
         .hero h2 {
-
-            font-size:
-                clamp(20px, 2.4vw, 30px);
+            font-size: clamp(20px, 2.4vw, 30px);
 
             line-height: 1.4;
 
@@ -374,9 +278,7 @@
             margin-bottom: 24px;
         }
 
-
         .hero p {
-
             max-width: 850px;
 
             margin: auto;
@@ -388,13 +290,10 @@
             line-height: 1.75;
         }
 
-
         .hero-buttons {
-
             display: flex;
 
             justify-content: center;
-
             align-items: center;
 
             gap: 15px;
@@ -404,13 +303,10 @@
             flex-wrap: wrap;
         }
 
-
         .hero-btn-primary {
-
             display: inline-flex;
 
             align-items: center;
-
             justify-content: center;
 
             padding: 14px 28px;
@@ -426,35 +322,27 @@
             transition: all 0.3s ease;
 
             box-shadow:
-                0 8px 25px
-                rgba(0, 184, 242, 0.22);
+                0 8px 25px rgba(0, 184, 242, 0.22);
         }
 
-
         .hero-btn-primary:hover {
-
             background: #00a6dc;
 
             transform: translateY(-3px);
 
             box-shadow:
-                0 12px 30px
-                rgba(0, 184, 242, 0.35);
+                0 12px 30px rgba(0, 184, 242, 0.35);
         }
 
-
         .hero-btn-secondary {
-
             display: inline-flex;
 
             align-items: center;
-
             justify-content: center;
 
             padding: 13px 28px;
 
-            border: 1px solid
-                rgba(255, 255, 255, 0.35);
+            border: 1px solid rgba(255, 255, 255, 0.35);
 
             color: #ffffff;
 
@@ -462,33 +350,25 @@
 
             font-weight: 600;
 
-            background:
-                rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.05);
 
             transition: all 0.3s ease;
         }
 
-
         .hero-btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.12);
 
-            background:
-                rgba(255, 255, 255, 0.12);
-
-            border-color:
-                rgba(255, 255, 255, 0.6);
+            border-color: rgba(255, 255, 255, 0.6);
 
             transform: translateY(-3px);
         }
 
-
         .hero-tech {
-
             margin-top: 55px;
 
             display: flex;
 
             justify-content: center;
-
             align-items: center;
 
             gap: 12px;
@@ -502,18 +382,14 @@
             letter-spacing: 0.5px;
         }
 
-
         .hero-tech span {
-
             padding: 6px 11px;
 
             border-radius: 20px;
 
-            background:
-                rgba(255, 255, 255, 0.06);
+            background: rgba(255, 255, 255, 0.06);
 
-            border: 1px solid
-                rgba(255, 255, 255, 0.10);
+            border: 1px solid rgba(255, 255, 255, 0.10);
         }
 
 
@@ -522,13 +398,10 @@
         ========================================================= */
 
         section {
-
             padding: 90px 0;
         }
 
-
         .section-title {
-
             text-align: center;
 
             color: #041c42;
@@ -542,9 +415,7 @@
             position: relative;
         }
 
-
         .section-title::after {
-
             content: "";
 
             display: block;
@@ -566,30 +437,24 @@
         ========================================================= */
 
         .about-section {
-
             background: #ffffff;
         }
 
-
         .about-grid {
-
             max-width: 1050px;
 
             margin: auto;
 
             display: grid;
 
-            grid-template-columns:
-                1fr 1fr;
+            grid-template-columns: 1fr 1fr;
 
             gap: 55px;
 
             align-items: center;
         }
 
-
         .about-content h3 {
-
             color: #041c42;
 
             font-size: 27px;
@@ -597,9 +462,7 @@
             margin-bottom: 18px;
         }
 
-
         .about-content p {
-
             color: #667085;
 
             font-size: 16px;
@@ -609,9 +472,7 @@
             margin-bottom: 15px;
         }
 
-
         .about-highlights {
-
             display: grid;
 
             grid-template-columns:
@@ -620,9 +481,7 @@
             gap: 15px;
         }
 
-
         .highlight-box {
-
             padding: 22px;
 
             border-radius: 12px;
@@ -634,9 +493,7 @@
             transition: all 0.3s ease;
         }
 
-
         .highlight-box:hover {
-
             transform: translateY(-4px);
 
             border-color: #bde8f6;
@@ -646,9 +503,7 @@
                 rgba(4, 28, 66, 0.08);
         }
 
-
         .highlight-box strong {
-
             display: block;
 
             color: #041c42;
@@ -658,9 +513,7 @@
             margin-bottom: 5px;
         }
 
-
         .highlight-box span {
-
             color: #667085;
 
             font-size: 14px;
@@ -672,13 +525,10 @@
         ========================================================= */
 
         .services-section {
-
             background: #f8fafc;
         }
 
-
         .section-subtitle {
-
             max-width: 750px;
 
             margin: -25px auto 45px;
@@ -692,9 +542,7 @@
             line-height: 1.7;
         }
 
-
         .services-grid {
-
             display: grid;
 
             grid-template-columns:
@@ -707,9 +555,7 @@
             margin: auto;
         }
 
-
         .service-card {
-
             position: relative;
 
             background: #ffffff;
@@ -744,19 +590,15 @@
             overflow: hidden;
         }
 
-
         .service-card::before {
-
             content: "";
 
             position: absolute;
 
             top: 0;
-
             left: 0;
 
             width: 100%;
-
             height: 3px;
 
             background: #00b8f2;
@@ -766,9 +608,7 @@
             transition: 0.3s ease;
         }
 
-
         .service-card:hover {
-
             transform: translateY(-7px);
 
             border-color: #bde8f6;
@@ -778,23 +618,17 @@
                 rgba(4, 28, 66, 0.12);
         }
 
-
         .service-card:hover::before {
-
             transform: scaleX(1);
         }
 
-
         .service-icon {
-
             width: 64px;
-
             height: 64px;
 
             display: flex;
 
             align-items: center;
-
             justify-content: center;
 
             margin-bottom: 20px;
@@ -808,11 +642,8 @@
             transition: all 0.3s ease;
         }
 
-
         .service-icon svg {
-
             width: 34px;
-
             height: 34px;
 
             fill: none;
@@ -822,13 +653,10 @@
             stroke-width: 1.8;
 
             stroke-linecap: round;
-
             stroke-linejoin: round;
         }
 
-
         .service-card:hover .service-icon {
-
             transform: scale(1.08);
 
             background: #dff5fc;
@@ -836,9 +664,7 @@
             color: #007fae;
         }
 
-
         .service-card h3 {
-
             color: #041c42;
 
             font-size: 18px;
@@ -850,9 +676,7 @@
             font-weight: 650;
         }
 
-
         .service-card p {
-
             color: #667085;
 
             font-size: 14px;
@@ -864,208 +688,10 @@
 
 
         /* =========================================================
-           EXPERIENCE
-        ========================================================= */
-
-        .experience-section {
-
-            background: #ffffff;
-        }
-
-
-        .experience-grid {
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(2, 1fr);
-
-            gap: 30px;
-
-            max-width: 1050px;
-
-            margin: auto;
-        }
-
-
-        .experience-card {
-
-            position: relative;
-
-            background: #ffffff;
-
-            border-radius: 16px;
-
-            padding: 38px 35px 32px;
-
-            min-height: 285px;
-
-            display: flex;
-
-            flex-direction: column;
-
-            align-items: center;
-
-            justify-content: center;
-
-            text-align: center;
-
-            border: 1px solid #e5ebf2;
-
-            box-shadow:
-                0 8px 25px
-                rgba(4, 28, 66, 0.07);
-
-            transition: all 0.3s ease;
-
-            overflow: hidden;
-        }
-
-
-        .experience-card::before {
-
-            content: "";
-
-            position: absolute;
-
-            top: 0;
-
-            left: 0;
-
-            width: 100%;
-
-            height: 4px;
-
-            background: #00b8f2;
-        }
-
-
-        .experience-card:hover {
-
-            transform: translateY(-7px);
-
-            border-color: #bfe8f5;
-
-            box-shadow:
-                0 15px 35px
-                rgba(4, 28, 66, 0.13);
-        }
-
-
-        .company-logo-box {
-
-            width: 190px;
-
-            height: 85px;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            margin-bottom: 20px;
-
-            background: #ffffff;
-        }
-
-
-        .company-logo {
-
-            max-width: 100%;
-
-            max-height: 100%;
-
-            width: auto;
-
-            height: auto;
-
-            object-fit: contain;
-        }
-
-
-        .stentor-box .company-logo {
-
-            width: 180px;
-
-            height: auto;
-        }
-
-
-        .vi-box {
-
-            width: 190px;
-
-            height: 85px;
-
-            overflow: hidden;
-        }
-
-
-        .vi-box .company-logo {
-
-            width: 170px;
-
-            height: 80px;
-
-            object-fit: contain;
-        }
-
-
-        .experience-card h3 {
-
-            color: #041c42;
-
-            font-size: 21px;
-
-            font-weight: 650;
-
-            margin-bottom: 8px;
-        }
-
-
-        .experience-card p {
-
-            color: #667085;
-
-            font-size: 15px;
-
-            max-width: 390px;
-
-            line-height: 1.5;
-        }
-
-
-        .experience-badge {
-
-            position: absolute;
-
-            top: 17px;
-
-            right: 18px;
-
-            background: #eaf8fd;
-
-            color: #008dbd;
-
-            padding: 5px 12px;
-
-            border-radius: 20px;
-
-            font-size: 11px;
-
-            font-weight: 600;
-
-            letter-spacing: 0.3px;
-        }
-
-
-        /* =========================================================
            CONTACT
         ========================================================= */
 
         .contact-section {
-
             background:
                 linear-gradient(
                     135deg,
@@ -1076,15 +702,11 @@
             color: #ffffff;
         }
 
-
         .contact-section .section-title {
-
             color: #ffffff;
         }
 
-
         .contact-grid {
-
             max-width: 1000px;
 
             margin: auto;
@@ -1097,9 +719,7 @@
             gap: 25px;
         }
 
-
         .contact-card {
-
             background:
                 rgba(255, 255, 255, 0.06);
 
@@ -1115,9 +735,7 @@
             transition: all 0.3s ease;
         }
 
-
         .contact-card:hover {
-
             transform: translateY(-5px);
 
             background:
@@ -1127,11 +745,8 @@
                 rgba(0, 200, 255, 0.4);
         }
 
-
         .contact-icon {
-
             width: 52px;
-
             height: 52px;
 
             margin: 0 auto 16px;
@@ -1139,7 +754,6 @@
             display: flex;
 
             align-items: center;
-
             justify-content: center;
 
             border-radius: 50%;
@@ -1150,11 +764,8 @@
             color: #55d9ff;
         }
 
-
         .contact-icon svg {
-
             width: 25px;
-
             height: 25px;
 
             fill: none;
@@ -1164,21 +775,16 @@
             stroke-width: 1.8;
 
             stroke-linecap: round;
-
             stroke-linejoin: round;
         }
 
-
         .contact-card h3 {
-
             font-size: 17px;
 
             margin-bottom: 9px;
         }
 
-
         .contact-card p {
-
             color: #c8d9e8;
 
             font-size: 14px;
@@ -1186,35 +792,28 @@
             line-height: 1.6;
         }
 
-
         .contact-card a {
-
             color: #c8f2ff;
 
             word-break: break-word;
         }
 
-
         .contact-card a:hover {
-
             color: #00c8ff;
         }
 
 
         /* =========================================================
-           WHATSAPP
+           WHATSAPP BUTTON
         ========================================================= */
 
         .whatsapp-button {
-
             position: fixed;
 
             right: 24px;
-
             bottom: 24px;
 
             width: 58px;
-
             height: 58px;
 
             border-radius: 50%;
@@ -1226,7 +825,6 @@
             display: flex;
 
             align-items: center;
-
             justify-content: center;
 
             box-shadow:
@@ -1238,9 +836,7 @@
             transition: all 0.3s ease;
         }
 
-
         .whatsapp-button:hover {
-
             transform: scale(1.1);
 
             box-shadow:
@@ -1248,11 +844,8 @@
                 rgba(37, 211, 102, 0.35);
         }
 
-
         .whatsapp-button svg {
-
             width: 30px;
-
             height: 30px;
 
             fill: currentColor;
@@ -1264,7 +857,6 @@
         ========================================================= */
 
         footer {
-
             background: #02152f;
 
             color: #9fb1c4;
@@ -1276,201 +868,127 @@
             font-size: 13px;
         }
 
-
         footer strong {
-
             color: #dceaf5;
         }
 
 
         /* =========================================================
-           RESPONSIVE
+           TABLET
         ========================================================= */
 
         @media (max-width: 1000px) {
 
             .services-grid {
-
                 grid-template-columns:
                     repeat(2, 1fr);
             }
 
-
             .about-grid {
-
                 grid-template-columns: 1fr;
 
                 gap: 35px;
             }
-
         }
 
+
+        /* =========================================================
+           MOBILE
+        ========================================================= */
 
         @media (max-width: 768px) {
 
             .navbar {
-
                 height: 68px;
             }
 
-
             .nav-container {
-
                 width: 92%;
             }
 
-
             .logo img {
-
                 width: 145px;
             }
 
-
             .nav {
-
                 gap: 14px;
             }
 
-
             .nav a {
-
                 font-size: 13px;
             }
 
-
             .hero {
-
                 min-height: 90vh;
 
                 padding:
                     125px 20px 70px;
             }
 
-
             .hero h1 {
-
                 letter-spacing: -0.8px;
             }
 
-
             .hero p {
-
                 font-size: 16px;
             }
 
-
             .hero-buttons {
-
                 flex-direction: column;
             }
 
-
             .hero-btn-primary,
             .hero-btn-secondary {
-
                 width: 220px;
             }
 
-
             .hero-tech {
-
                 margin-top: 40px;
             }
 
-
-            .experience-grid {
-
-                grid-template-columns: 1fr;
-
-                gap: 20px;
-            }
-
-
-            .experience-card {
-
-                min-height: 260px;
-
-                padding:
-                    38px 25px 30px;
-            }
-
-
-            .company-logo-box {
-
-                width: 160px;
-
-                height: 70px;
-            }
-
-
-            .stentor-box .company-logo {
-
-                width: 155px;
-            }
-
-
-            .vi-box .company-logo {
-
-                width: 145px;
-
-                height: 68px;
-            }
-
-
             .contact-grid {
-
                 grid-template-columns: 1fr;
 
                 max-width: 500px;
             }
 
-
             section {
-
                 padding: 70px 0;
             }
 
-
             .section-title {
-
                 font-size: 30px;
 
                 margin-bottom: 45px;
             }
-
         }
 
+
+        /* =========================================================
+           SMALL MOBILE
+        ========================================================= */
 
         @media (max-width: 600px) {
 
             .nav {
-
                 gap: 10px;
             }
 
-
             .nav a {
-
                 font-size: 12px;
             }
 
-
             .services-grid {
-
                 grid-template-columns: 1fr;
             }
 
-
             .service-card {
-
                 min-height: auto;
 
                 padding: 30px 25px;
             }
 
-
             .section-subtitle {
-
                 font-size: 16px;
 
                 margin-bottom: 35px;
@@ -1478,58 +996,45 @@
                 padding: 0 10px;
             }
 
-
             .about-highlights {
-
                 grid-template-columns: 1fr;
             }
 
-
             .whatsapp-button {
-
                 width: 52px;
-
                 height: 52px;
 
                 right: 18px;
-
                 bottom: 18px;
             }
-
         }
 
+
+        /* =========================================================
+           VERY SMALL SCREEN
+        ========================================================= */
 
         @media (max-width: 450px) {
 
             .nav {
-
                 gap: 8px;
             }
 
-
             .nav a {
-
                 font-size: 11px;
             }
 
-
             .logo img {
-
                 width: 125px;
             }
 
-
             .hero h1 {
-
                 font-size: 42px;
             }
 
-
             .hero h2 {
-
                 font-size: 19px;
             }
-
         }
 
     </style>
@@ -1570,10 +1075,6 @@
 
                 <a href="#services">
                     Services
-                </a>
-
-                <a href="#experience">
-                    Experience
                 </a>
 
                 <a href="#contact">
@@ -1654,29 +1155,17 @@
 
             <div class="hero-tech">
 
-                <span>
-                    LTE
-                </span>
+                <span>LTE</span>
 
-                <span>
-                    5G NR
-                </span>
+                <span>5G NR</span>
 
-                <span>
-                    NB-IoT
-                </span>
+                <span>NB-IoT</span>
 
-                <span>
-                    LTE-M
-                </span>
+                <span>LTE-M</span>
 
-                <span>
-                    RF Testing
-                </span>
+                <span>RF Testing</span>
 
-                <span>
-                    Automation
-                </span>
+                <span>Automation</span>
 
             </div>
 
@@ -1691,9 +1180,13 @@
          ABOUT
     ========================================================= -->
 
-    <section id="about" class="about-section">
+    <section
+        id="about"
+        class="about-section"
+    >
 
         <div class="container">
+
 
             <h2 class="section-title">
                 About TeleArena
@@ -1836,7 +1329,9 @@
             <div class="services-grid">
 
 
-                <!-- SERVICE 1 -->
+                <!-- =================================================
+                     SERVICE 1
+                ================================================= -->
 
                 <div class="service-card">
 
@@ -1886,7 +1381,9 @@
 
 
 
-                <!-- SERVICE 2 -->
+                <!-- =================================================
+                     SERVICE 2
+                ================================================= -->
 
                 <div class="service-card">
 
@@ -1923,7 +1420,9 @@
 
 
 
-                <!-- SERVICE 3 -->
+                <!-- =================================================
+                     SERVICE 3
+                ================================================= -->
 
                 <div class="service-card">
 
@@ -1980,7 +1479,9 @@
 
 
 
-                <!-- SERVICE 4 -->
+                <!-- =================================================
+                     SERVICE 4
+                ================================================= -->
 
                 <div class="service-card">
 
@@ -2025,7 +1526,9 @@
 
 
 
-                <!-- SERVICE 5 -->
+                <!-- =================================================
+                     SERVICE 5
+                ================================================= -->
 
                 <div class="service-card">
 
@@ -2037,7 +1540,9 @@
 
                             <path d="M4 19h16"></path>
 
-                            <polyline points="7,15 10,11 13,13 18,7"></polyline>
+                            <polyline
+                                points="7,15 10,11 13,13 18,7"
+                            ></polyline>
 
                             <circle
                                 cx="7"
@@ -2084,7 +1589,9 @@
 
 
 
-                <!-- SERVICE 6 -->
+                <!-- =================================================
+                     SERVICE 6
+                ================================================= -->
 
                 <div class="service-card">
 
@@ -2137,7 +1644,9 @@
 
 
 
-                <!-- SERVICE 7 -->
+                <!-- =================================================
+                     SERVICE 7
+                ================================================= -->
 
                 <div class="service-card">
 
@@ -2184,7 +1693,9 @@
 
 
 
-                <!-- SERVICE 8 -->
+                <!-- =================================================
+                     SERVICE 8
+                ================================================= -->
 
                 <div class="service-card">
 
@@ -2228,109 +1739,6 @@
 
                         Validation of IoT devices and cellular
                         technologies including NB-IoT and LTE-M.
-
-                    </p>
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================================================
-         EXPERIENCE
-    ========================================================= -->
-
-    <section
-        id="experience"
-        class="experience-section"
-    >
-
-        <div class="container">
-
-
-            <h2 class="section-title">
-                Industry Experience
-            </h2>
-
-
-            <div class="experience-grid">
-
-
-                <!-- STENTOR -->
-
-                <div class="experience-card">
-
-                    <span class="experience-badge">
-                        Experience
-                    </span>
-
-
-                    <div
-                        class="company-logo-box stentor-box"
-                    >
-
-                        <img
-                            src="Stentor_logo.png"
-                            alt="Stentor Technologies"
-                            class="company-logo"
-                        >
-
-                    </div>
-
-
-                    <h3>
-                        Stentor Technologies
-                    </h3>
-
-
-                    <p>
-
-                        Telecom engineering, device testing,
-                        protocol validation and automation.
-
-                    </p>
-
-                </div>
-
-
-
-                <!-- VI -->
-
-                <div class="experience-card">
-
-                    <span class="experience-badge">
-                        Experience
-                    </span>
-
-
-                    <div
-                        class="company-logo-box vi-box"
-                    >
-
-                        <img
-                            src="Vi_logo.jpg"
-                            alt="Vi"
-                            class="company-logo"
-                        >
-
-                    </div>
-
-
-                    <h3>
-                        Vi
-                    </h3>
-
-
-                    <p>
-
-                        Cellular network testing, field validation
-                        and telecom service experience.
 
                     </p>
 
@@ -2539,7 +1947,7 @@
                 -.89-.79-1.49-1.76-1.66-2.06
                 -.17-.3-.02-.46.13-.61
                 .13-.13.3-.35.45-.52
-                .15-.17.2-.3.3-.5
+                .15-.17.2-.3.2-.5
                 .1-.2.05-.37-.02-.52
                 -.07-.15-.67-1.62-.92-2.22
                 -.24-.58-.49-.5-.67-.51
@@ -2567,10 +1975,12 @@
     <footer>
 
         © 2026
+
         <strong>
             TeleArena Cellular Services
-        </strong>.
-        All Rights Reserved.
+        </strong>
+
+        . All Rights Reserved.
 
     </footer>
 
