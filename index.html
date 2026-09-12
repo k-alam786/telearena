@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>TeleArena Cellular Services</title>
 
-<meta name="description" content="TeleArena Cellular Services - LTE, 5G NR, IoT Testing, Protocol Validation, RF Survey, Drive Testing and Automation Framework Development">
+<meta
+name="description"
+content="TeleArena Cellular Services - LTE, 5G NR, IoT Testing, Protocol Validation, RF Survey, Drive Testing and Automation Framework Development"
+>
 
 <style>
 
-/* =========================
+/* =========================================================
    GLOBAL
-========================= */
+========================================================= */
 
 * {
     margin: 0;
@@ -32,45 +38,71 @@ body {
 }
 
 
-/* =========================
+/* =========================================================
    NAVIGATION BAR
-========================= */
+========================================================= */
 
 .navbar {
     position: fixed;
     top: 0;
+    left: 0;
+
     width: 100%;
-    background: rgba(255, 255, 255, 0.96);
-    backdrop-filter: blur(8px);
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+
+    background: rgba(255, 255, 255, 0.97);
+
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.08);
+
     z-index: 1000;
 }
 
 .navwrap {
     max-width: 1200px;
+
     margin: auto;
+
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
-    padding: 10px 20px;
+
+    padding: 8px 20px;
 }
+
+
+/* Logo */
 
 .logo img {
     height: 55px;
+
     width: auto;
+
     display: block;
 }
 
+
+/* Navigation */
+
 .nav {
     display: flex;
+
     align-items: center;
 }
 
 .nav a {
     color: #041c42;
+
     text-decoration: none;
+
     margin-left: 28px;
+
+    font-size: 16px;
+
     font-weight: 600;
+
     transition: 0.3s;
 }
 
@@ -79,64 +111,93 @@ body {
 }
 
 
-/* =========================
+/* =========================================================
    HERO SECTION
-========================= */
+========================================================= */
 
 .hero {
+
     min-height: 100vh;
 
     background:
         linear-gradient(
             rgba(4, 28, 66, 0.84),
-            rgba(4, 28, 66, 0.90)
+            rgba(4, 28, 66, 0.91)
         ),
         url("hero.png");
 
     background-size: cover;
+
     background-position: 75% center;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     text-align: center;
+
     color: white;
 
     padding: 130px 20px 70px;
 }
 
-.hero h1 {
-    font-size: 68px;
-    line-height: 1.15;
-    margin-bottom: 22px;
-}
+.hero-content {
+    max-width: 1000px;
 
-.hero h2 {
-    font-size: 29px;
-    font-weight: 300;
-    margin-bottom: 22px;
-}
-
-.hero p {
-    max-width: 900px;
-    font-size: 21px;
     margin: auto;
 }
 
+.hero h1 {
 
-/* =========================
+    font-size: 68px;
+
+    line-height: 1.15;
+
+    margin-bottom: 22px;
+
+    font-weight: 700;
+}
+
+.hero h2 {
+
+    font-size: 29px;
+
+    line-height: 1.4;
+
+    font-weight: 300;
+
+    margin-bottom: 24px;
+}
+
+.hero p {
+
+    max-width: 900px;
+
+    margin: auto;
+
+    font-size: 21px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
    BUTTON
-========================= */
+========================================================= */
 
 .btn {
+
     display: inline-block;
+
     margin-top: 32px;
 
     padding: 15px 34px;
 
     background: #00b8f2;
-    color: #fff;
+
+    color: #ffffff;
 
     text-decoration: none;
 
@@ -144,83 +205,363 @@ body {
 
     font-weight: 600;
 
-    transition: 0.3s;
+    font-size: 16px;
+
+    transition: all 0.3s ease;
 }
 
 .btn:hover {
+
     background: #009fd4;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0, 184, 242, 0.35);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 184, 242, 0.35);
 }
 
 
-/* =========================
+/* =========================================================
    GENERAL SECTIONS
-========================= */
+========================================================= */
 
 .container {
+
     max-width: 1200px;
+
     margin: auto;
+
     padding: 85px 20px;
 }
 
 .section-title {
+
     text-align: center;
+
     font-size: 38px;
+
+    line-height: 1.2;
+
     color: #041c42;
-    margin-bottom: 42px;
+
+    margin-bottom: 45px;
+
+    font-weight: 700;
 }
 
 
-/* =========================
+/* =========================================================
    CARDS
-========================= */
+========================================================= */
 
 .grid {
+
     display: grid;
-    grid-template-columns: repeat(
-        auto-fit,
-        minmax(250px, 1fr)
-    );
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
 
     gap: 25px;
 }
 
 .card {
+
     background: #ffffff;
 
     padding: 30px;
 
-    border-radius: 12px;
+    border-radius: 14px;
+
+    border: 1px solid #e8edf3;
 
     box-shadow:
-        0 5px 15px rgba(0, 0, 0, 0.07);
+        0 6px 18px rgba(4, 28, 66, 0.06);
 
-    transition: 0.3s;
-
-    border: 1px solid #edf1f5;
+    transition: all 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-4px);
+
+    transform: translateY(-5px);
 
     box-shadow:
-        0 10px 25px rgba(0, 0, 0, 0.10);
+        0 12px 28px rgba(4, 28, 66, 0.11);
+
+    border-color: #cfeaf5;
 }
 
 .card h3 {
+
     color: #041c42;
+
+    font-size: 19px;
+
+    font-weight: 650;
 }
 
 
-/* =========================
-   CONTACT SECTION
-========================= */
+/* =========================================================
+   ABOUT SECTION
+========================================================= */
+
+.about-card {
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    text-align: center;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    color: #4b5563;
+
+    padding: 40px;
+}
+
+
+/* =========================================================
+   SERVICES
+========================================================= */
+
+.service-card {
+
+    min-height: 120px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+.service-card h3 {
+
+    font-size: 18px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   INDUSTRY EXPERIENCE
+========================================================= */
+
+.experience-section {
+
+    background: #f8fafc;
+}
+
+.experience-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+
+    max-width: 1050px;
+
+    margin: 0 auto;
+}
+
+.experience-card {
+
+    position: relative;
+
+    background: #ffffff;
+
+    border-radius: 16px;
+
+    padding: 38px 35px 32px;
+
+    min-height: 285px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    border: 1px solid #e5ebf2;
+
+    box-shadow:
+        0 8px 25px rgba(4, 28, 66, 0.07);
+
+    transition: all 0.3s ease;
+
+    overflow: hidden;
+}
+
+
+/* Top blue line */
+
+.experience-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 4px;
+
+    background: #00b8f2;
+}
+
+.experience-card:hover {
+
+    transform: translateY(-7px);
+
+    border-color: #bfe8f5;
+
+    box-shadow:
+        0 15px 35px rgba(4, 28, 66, 0.13);
+}
+
+
+/* Logo container */
+
+.company-logo-box {
+
+    width: 190px;
+
+    height: 85px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    background: #ffffff;
+}
+
+
+/* Company logos */
+
+.company-logo {
+
+    max-width: 100%;
+
+    max-height: 100%;
+
+    width: auto;
+
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* Stentor */
+
+.stentor-box .company-logo {
+
+    width: 180px;
+
+    height: auto;
+}
+
+
+/* Vi */
+
+.vi-box {
+
+    width: 190px;
+
+    height: 85px;
+
+    overflow: hidden;
+}
+
+.vi-box .company-logo {
+
+    width: 170px;
+
+    height: 80px;
+
+    object-fit: contain;
+}
+
+
+/* Company name */
+
+.experience-card h3 {
+
+    color: #041c42;
+
+    font-size: 21px;
+
+    font-weight: 650;
+
+    margin-bottom: 8px;
+}
+
+
+/* Description */
+
+.experience-card p {
+
+    color: #667085;
+
+    font-size: 15px;
+
+    max-width: 390px;
+
+    line-height: 1.5;
+}
+
+
+/* Experience badge */
+
+.experience-badge {
+
+    position: absolute;
+
+    top: 17px;
+
+    right: 18px;
+
+    background: #eaf8fd;
+
+    color: #008dbd;
+
+    padding: 5px 12px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.3px;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
 
 .contact {
+
     background: #041c42;
 
-    color: #fff;
+    color: #ffffff;
 
     text-align: center;
 
@@ -228,60 +569,83 @@ body {
 }
 
 .contact h2 {
+
     font-size: 38px;
-    margin-bottom: 25px;
+
+    margin-bottom: 28px;
 }
 
 .contact p {
-    margin: 12px 0;
+
+    margin: 13px 0;
+
     font-size: 19px;
+
+    line-height: 1.6;
 }
 
 .contact a {
-    color: #fff;
+
+    color: #ffffff;
+
     text-decoration: none;
+
+    transition: 0.3s;
 }
 
 .contact a:hover {
+
     color: #00c8ff;
 }
 
 
-/* =========================
+/* =========================================================
    FOOTER
-========================= */
+========================================================= */
 
 footer {
+
     background: #02112c;
 
-    color: #fff;
+    color: #ffffff;
 
     text-align: center;
 
-    padding: 30px 20px;
+    padding: 32px 20px;
 }
 
 footer h3 {
+
     margin-bottom: 8px;
+
+    font-size: 21px;
 }
 
 footer p {
+
     margin: 4px 0;
+
+    color: #d9e2ef;
+
+    font-size: 14px;
 }
 
 
-/* =========================
+/* =========================================================
    WHATSAPP BUTTON
-========================= */
+========================================================= */
 
 .whatsapp {
+
     position: fixed;
 
     right: 20px;
+
     bottom: 20px;
 
     background: #25D366;
-    color: #fff;
+
+    color: #ffffff;
 
     padding: 14px 20px;
 
@@ -291,140 +655,286 @@ footer p {
 
     font-weight: bold;
 
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.20);
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.22);
 
     z-index: 999;
+
+    transition: all 0.3s ease;
 }
 
 .whatsapp:hover {
+
     background: #1ebe5d;
-    transform: translateY(-2px);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 22px rgba(0, 0, 0, 0.25);
 }
 
 
-/* =========================
-   MOBILE RESPONSIVE
-========================= */
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .hero h1 {
+
+        font-size: 54px;
+    }
+
+    .hero h2 {
+
+        font-size: 24px;
+    }
+
+    .hero p {
+
+        font-size: 19px;
+    }
+
+    .nav a {
+
+        margin-left: 18px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
 
 @media (max-width: 768px) {
 
     .navwrap {
+
         padding: 8px 15px;
     }
 
     .logo img {
+
         height: 48px;
     }
 
     .nav a {
-        margin-left: 14px;
-        font-size: 14px;
+
+        margin-left: 10px;
+
+        font-size: 13px;
     }
 
     .hero {
+
         padding: 120px 20px 60px;
+
         background-position: center;
     }
 
     .hero h1 {
+
         font-size: 42px;
     }
 
     .hero h2 {
+
         font-size: 21px;
     }
 
     .hero p {
+
         font-size: 17px;
     }
 
     .section-title {
+
         font-size: 32px;
+
+        margin-bottom: 35px;
     }
 
     .container {
+
         padding: 65px 20px;
     }
 
+    .about-card {
+
+        padding: 30px 25px;
+
+        font-size: 16px;
+    }
+
+    .experience-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .experience-card {
+
+        min-height: 260px;
+
+        padding: 38px 25px 30px;
+    }
+
+    .contact {
+
+        padding: 70px 20px;
+    }
+
     .contact h2 {
+
         font-size: 32px;
     }
 
     .contact p {
+
         font-size: 17px;
     }
 
 }
 
 
-/* =========================
+/* =========================================================
    SMALL MOBILE
-========================= */
+========================================================= */
 
 @media (max-width: 480px) {
 
     .navwrap {
+
         flex-direction: column;
-        gap: 8px;
+
+        gap: 5px;
+
+        padding: 7px 10px;
+    }
+
+    .logo img {
+
+        height: 45px;
     }
 
     .nav a {
-        margin-left: 8px;
-        margin-right: 8px;
-        font-size: 13px;
+
+        margin-left: 7px;
+
+        margin-right: 7px;
+
+        font-size: 12px;
+    }
+
+    .hero {
+
+        padding-top: 145px;
     }
 
     .hero h1 {
+
         font-size: 34px;
     }
 
     .hero h2 {
+
         font-size: 18px;
     }
 
     .hero p {
+
         font-size: 16px;
     }
 
     .btn {
+
         padding: 13px 25px;
+
+        font-size: 15px;
+    }
+
+    .experience-card h3 {
+
+        font-size: 19px;
+    }
+
+    .company-logo-box {
+
+        width: 160px;
+
+        height: 70px;
+    }
+
+    .stentor-box .company-logo {
+
+        width: 155px;
+    }
+
+    .vi-box .company-logo {
+
+        width: 145px;
+
+        height: 68px;
     }
 
     .whatsapp {
+
         right: 12px;
+
         bottom: 12px;
+
         padding: 12px 17px;
+
+        font-size: 14px;
     }
+
 }
 
 </style>
+
 </head>
 
 
 <body>
 
 
-<!-- =========================
+<!-- =========================================================
      NAVIGATION
-========================= -->
+========================================================= -->
 
 <nav class="navbar">
 
     <div class="navwrap">
 
         <div class="logo">
-            <img src="logo.png" alt="TeleArena Cellular Services">
+
+            <img
+                src="logo.png"
+                alt="TeleArena Cellular Services"
+            >
+
         </div>
+
 
         <div class="nav">
 
-            <a href="#about">About</a>
+            <a href="#about">
+                About
+            </a>
 
-            <a href="#services">Services</a>
+            <a href="#services">
+                Services
+            </a>
 
-            <a href="#experience">Experience</a>
+            <a href="#experience">
+                Experience
+            </a>
 
-            <a href="#contact">Contact</a>
+            <a href="#contact">
+                Contact
+            </a>
 
         </div>
 
@@ -433,19 +943,23 @@ footer p {
 </nav>
 
 
-<!-- =========================
+<!-- =========================================================
      HERO
-========================= -->
+========================================================= -->
 
 <section class="hero">
 
-    <div>
+    <div class="hero-content">
 
-        <h1>TeleArena Cellular Services</h1>
+        <h1>
+            TeleArena Cellular Services
+        </h1>
+
 
         <h2>
             LTE • 5G NR • IoT • Device Validation • Automation Frameworks
         </h2>
+
 
         <p>
             Engineering Reliable Wireless Experiences through advanced
@@ -453,7 +967,11 @@ footer p {
             analysis and network validation.
         </p>
 
-        <a class="btn" href="#contact">
+
+        <a
+            class="btn"
+            href="#contact"
+        >
             Request Consultation
         </a>
 
@@ -462,23 +980,30 @@ footer p {
 </section>
 
 
-<!-- =========================
+<!-- =========================================================
      ABOUT
-========================= -->
+========================================================= -->
 
-<section id="about" class="container">
+<section
+    id="about"
+    class="container"
+>
 
     <h2 class="section-title">
         About TeleArena
     </h2>
 
-    <div class="card">
+
+    <div class="card about-card">
 
         <p>
-            TeleArena Cellular Services specializes in LTE, 5G NR and IoT
-            technologies. We provide end-to-end device testing, protocol
-            validation, feature testing, automation framework development,
-            RF survey, drive testing and detailed LTE/NR call flow analysis.
+
+            TeleArena Cellular Services specializes in LTE, 5G NR and
+            IoT technologies. We provide end-to-end device testing,
+            protocol validation, feature testing, automation framework
+            development, RF survey, drive testing and detailed LTE/NR
+            call flow analysis.
+
         </p>
 
     </div>
@@ -486,115 +1011,245 @@ footer p {
 </section>
 
 
-<!-- =========================
+<!-- =========================================================
      SERVICES
-========================= -->
+========================================================= -->
 
-<section id="services" class="container">
+<section
+    id="services"
+    class="container"
+>
 
     <h2 class="section-title">
         Our Services
     </h2>
 
+
     <div class="grid">
 
-        <div class="card">
-            <h3>End-to-End Device Testing</h3>
+
+        <div class="card service-card">
+
+            <h3>
+                End-to-End Device Testing
+            </h3>
+
         </div>
 
-        <div class="card">
-            <h3>Feature Testing</h3>
+
+        <div class="card service-card">
+
+            <h3>
+                Feature Testing
+            </h3>
+
         </div>
 
-        <div class="card">
-            <h3>Automation Framework Development</h3>
+
+        <div class="card service-card">
+
+            <h3>
+                Automation Framework Development
+            </h3>
+
         </div>
 
-        <div class="card">
-            <h3>LTE &amp; 5G NR Protocol Testing</h3>
+
+        <div class="card service-card">
+
+            <h3>
+                LTE &amp; 5G NR Protocol Testing
+            </h3>
+
         </div>
 
-        <div class="card">
-            <h3>LTE / NR Log Analysis</h3>
+
+        <div class="card service-card">
+
+            <h3>
+                LTE / NR Log Analysis
+            </h3>
+
         </div>
 
-        <div class="card">
-            <h3>Field Test &amp; Drive Test</h3>
+
+        <div class="card service-card">
+
+            <h3>
+                Field Test &amp; Drive Test
+            </h3>
+
         </div>
 
-        <div class="card">
-            <h3>RF Survey</h3>
+
+        <div class="card service-card">
+
+            <h3>
+                RF Survey
+            </h3>
+
         </div>
 
-        <div class="card">
-            <h3>IoT Testing</h3>
+
+        <div class="card service-card">
+
+            <h3>
+                IoT Testing
+            </h3>
+
         </div>
+
 
     </div>
 
 </section>
 
 
-<!-- =========================
-     EXPERIENCE
-========================= -->
+<!-- =========================================================
+     INDUSTRY EXPERIENCE
+========================================================= -->
 
-<section id="experience" class="container">
+<section
+    id="experience"
+    class="container experience-section"
+>
 
     <h2 class="section-title">
         Industry Experience
     </h2>
 
-    <div class="grid">
 
-        <div class="card">
-            <h3>✓ Stentor Technologies</h3>
+    <div class="experience-grid">
+
+
+        <!-- =========================
+             STENTOR TECHNOLOGIES
+        ========================== -->
+
+        <div class="experience-card">
+
+
+            <span class="experience-badge">
+                Experience
+            </span>
+
+
+            <div class="company-logo-box stentor-box">
+
+                <img
+                    src="Stentor_logo.png"
+                    alt="Stentor Technologies"
+                    class="company-logo"
+                >
+
+            </div>
+
+
+            <h3>
+                Stentor Technologies
+            </h3>
+
+
+            <p>
+                Telecom engineering, device testing,
+                protocol validation and automation.
+            </p>
+
+
         </div>
 
-        <div class="card">
-            <h3>✓ Vi</h3>
+
+        <!-- =========================
+             VI
+        ========================== -->
+
+        <div class="experience-card">
+
+
+            <span class="experience-badge">
+                Experience
+            </span>
+
+
+            <div class="company-logo-box vi-box">
+
+                <img
+                    src="Vi_logo.jpg"
+                    alt="Vi"
+                    class="company-logo"
+                >
+
+            </div>
+
+
+            <h3>
+                Vi
+            </h3>
+
+
+            <p>
+                Cellular network testing, field validation
+                and telecom service experience.
+            </p>
+
+
         </div>
+
 
     </div>
 
 </section>
 
 
-<!-- =========================
+<!-- =========================================================
      CONTACT
-========================= -->
+========================================================= -->
 
-<section id="contact" class="contact">
+<section
+    id="contact"
+    class="contact"
+>
 
     <h2>
         Contact Us
     </h2>
 
+
     <p>
+
         📞
+
         <a href="tel:+918888833622">
             +91 8888833622
         </a>
+
     </p>
 
+
     <p>
+
         📧
+
         <a href="mailto:info@telearena.in">
             info@telearena.in
         </a>
+
     </p>
 
+
     <p>
+
         📍 PLOT NO. 3/1, FLAT NO. 2 KANAN RESIDENCY,
         RAHATANI, PUNE, Maharashtra, India – 411017
+
     </p>
 
 </section>
 
 
-<!-- =========================
+<!-- =========================================================
      FOOTER
-========================= -->
+========================================================= -->
 
 <footer>
 
@@ -602,15 +1257,19 @@ footer p {
         TeleArena Cellular Services
     </h3>
 
+
     <p>
         Engineering Reliable Wireless Experiences
     </p>
+
 
     <p>
         LTE • 5G NR • IoT • Automation • Protocol Testing
     </p>
 
+
     <br>
+
 
     <p>
         © 2026 TeleArena Cellular Services.
@@ -620,9 +1279,9 @@ footer p {
 </footer>
 
 
-<!-- =========================
+<!-- =========================================================
      WHATSAPP
-========================= -->
+========================================================= -->
 
 <a
     class="whatsapp"
@@ -635,4 +1294,5 @@ footer p {
 
 
 </body>
+
 </html>
