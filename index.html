@@ -1,1111 +1,1199 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="en-IN">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="description"
-        content="TeleArena Cellular Services - LTE, 5G NR, IoT Testing, Protocol Validation, RF Testing and Automation Framework Development."
-    >
-
-    <meta
-        name="keywords"
-        content="LTE Testing, 5G NR Testing, Telecom Testing, Protocol Testing, IoT Testing, RF Testing, Drive Test, Automation, TeleArena"
-    >
-
-    <meta
-        name="author"
-        content="TeleArena Cellular Services"
-    >
-
-    <title>TeleArena Cellular Services</title>
-
-
-    <style>
-
-        /* =========================================================
-           GLOBAL
-        ========================================================= */
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+```
+<!-- =========================================================
+     PRIMARY SEO
+========================================================= -->
+
+<title>TeleArena Cellular Services | LTE & 5G Testing</title>
+
+<meta name="description"
+    content="TeleArena Cellular Services provides LTE, 5G NR, IoT, RF, protocol, device, field and drive testing, log analysis and telecom test automation services.">
+
+<meta name="author" content="TeleArena Cellular Services">
+
+<meta name="robots" content="index, follow">
+
+<meta name="theme-color" content="#041c42">
+
+<link rel="canonical" href="https://telearena.in/">
+
+
+<!-- =========================================================
+     OPEN GRAPH / SOCIAL SHARING
+========================================================= -->
+
+<meta property="og:type" content="website">
+<meta property="og:title"
+    content="TeleArena Cellular Services | LTE & 5G Testing">
+<meta property="og:description"
+    content="LTE, 5G NR, IoT, RF, protocol, device, field testing and telecom automation services.">
+<meta property="og:url" content="https://telearena.in/">
+<meta property="og:site_name" content="TeleArena Cellular Services">
+<meta property="og:image" content="https://telearena.in/hero.png">
+
+
+<!-- =========================================================
+     TWITTER / X
+========================================================= -->
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title"
+    content="TeleArena Cellular Services | LTE & 5G Testing">
+<meta name="twitter:description"
+    content="Specialized LTE, 5G NR, IoT, RF testing and telecom automation services.">
+<meta name="twitter:image" content="https://telearena.in/hero.png">
+
+
+<!-- =========================================================
+     FAVICON
+========================================================= -->
+
+<link rel="icon" type="image/png" href="logo.png">
+
+
+<!-- =========================================================
+     ORGANIZATION STRUCTURED DATA
+========================================================= -->
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://telearena.in/#organization",
+    "name": "TeleArena Cellular Services",
+    "url": "https://telearena.in/",
+    "logo": {
+        "@type": "ImageObject",
+        "url": "https://telearena.in/logo.png"
+    },
+    "telephone": "+918888833622",
+    "email": "info@telearena.in",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Plot No. 3/1, Flat No. 2, Kanan Residency, Rahatani",
+        "addressLocality": "Pune",
+        "addressRegion": "Maharashtra",
+        "postalCode": "411017",
+        "addressCountry": "IN"
+    }
+}
+</script>
+
+
+<!-- =========================================================
+     WEBSITE STRUCTURED DATA
+========================================================= -->
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://telearena.in/#website",
+    "url": "https://telearena.in/",
+    "name": "TeleArena Cellular Services",
+    "publisher": {
+        "@id": "https://telearena.in/#organization"
+    }
+}
+</script>
+
+
+<style>
+
+    /* =========================================================
+       GLOBAL
+    ========================================================= */
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 76px;
+    }
+
+    body {
+        background: #f8fafc;
+        color: #222;
+        line-height: 1.6;
+        font-family: Arial, Helvetica, sans-serif;
+        overflow-x: hidden;
+    }
+
+    a {
+        text-decoration: none;
+    }
 
-        html {
-            scroll-behavior: smooth;
-        }
+    img {
+        max-width: 100%;
+        display: block;
+    }
 
-        body {
-            background: #f8fafc;
-            color: #222;
-            line-height: 1.6;
-            font-family: Arial, Helvetica, sans-serif;
-        }
+    .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+    }
 
-        a {
-            text-decoration: none;
-        }
 
-        img {
-            max-width: 100%;
-            display: block;
-        }
+    /* =========================================================
+       NAVBAR
+    ========================================================= */
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 76px;
+
+        background: rgba(255, 255, 255, 0.97);
 
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: auto;
-        }
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
 
+        border-bottom: 1px solid #e8edf3;
 
-        /* =========================================================
-           NAVBAR
-        ========================================================= */
+        box-shadow:
+            0 4px 20px rgba(4, 28, 66, 0.06);
 
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 76px;
+        z-index: 1000;
+    }
 
-            background: rgba(255, 255, 255, 0.96);
+    .nav-container {
+        width: 90%;
+        max-width: 1200px;
+        height: 100%;
+        margin: auto;
 
-            backdrop-filter: blur(10px);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 
-            border-bottom: 1px solid #e8edf3;
+    .logo {
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+    }
 
-            box-shadow:
-                0 4px 20px rgba(4, 28, 66, 0.06);
+    .logo img {
+        width: 175px;
+        height: auto;
+    }
 
-            z-index: 1000;
-        }
+    .nav {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
 
-        .nav-container {
-            width: 90%;
-            max-width: 1200px;
-            height: 100%;
-            margin: auto;
+    .nav a {
+        color: #041c42;
+        font-size: 15px;
+        font-weight: 600;
 
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+        position: relative;
 
-        .logo {
-            display: flex;
-            align-items: center;
-        }
+        transition: color 0.25s ease;
+    }
 
-        .logo img {
-            width: 175px;
-            height: auto;
-        }
+    .nav a::after {
+        content: "";
 
-        .nav {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-        }
+        position: absolute;
+        left: 0;
+        bottom: -7px;
 
-        .nav a {
-            color: #041c42;
-            font-size: 15px;
-            font-weight: 600;
+        width: 0;
+        height: 2px;
 
-            position: relative;
+        background: #00b8f2;
 
-            transition: color 0.25s ease;
-        }
+        transition: width 0.25s ease;
+    }
 
-        .nav a::after {
-            content: "";
+    .nav a:hover {
+        color: #009fd4;
+    }
 
-            position: absolute;
-            left: 0;
-            bottom: -7px;
+    .nav a:hover::after {
+        width: 100%;
+    }
 
-            width: 0;
-            height: 2px;
 
-            background: #00b8f2;
+    /* =========================================================
+       HERO
+    ========================================================= */
 
-            transition: width 0.25s ease;
-        }
+    .hero {
+        min-height: 100vh;
 
-        .nav a:hover {
-            color: #009fd4;
-        }
+        position: relative;
+        overflow: hidden;
 
-        .nav a:hover::after {
-            width: 100%;
-        }
+        background:
+            linear-gradient(
+                110deg,
+                rgba(3, 22, 52, 0.96) 0%,
+                rgba(4, 38, 82, 0.88) 48%,
+                rgba(0, 115, 170, 0.62) 100%
+            ),
+            url("hero.png");
 
+        background-size: cover;
+        background-position: center;
 
-        /* =========================================================
-           HERO
-        ========================================================= */
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-        .hero {
-            min-height: 100vh;
+        text-align: center;
 
-            position: relative;
-            overflow: hidden;
+        color: #ffffff;
 
-            background:
-                linear-gradient(
-                    110deg,
-                    rgba(3, 22, 52, 0.96) 0%,
-                    rgba(4, 38, 82, 0.88) 48%,
-                    rgba(0, 115, 170, 0.62) 100%
-                ),
-                url("hero.png");
+        padding: 140px 20px 80px;
+    }
 
-            background-size: cover;
-            background-position: center;
+    .hero::before {
+        content: "";
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        position: absolute;
 
-            text-align: center;
+        width: 650px;
+        height: 650px;
 
-            color: #ffffff;
+        right: -220px;
+        top: 80px;
 
-            padding: 140px 20px 80px;
-        }
+        border-radius: 50%;
 
-        .hero::before {
-            content: "";
+        border: 1px solid rgba(0, 200, 255, 0.18);
 
-            position: absolute;
+        box-shadow:
+            0 0 0 70px rgba(0, 200, 255, 0.035),
+            0 0 0 140px rgba(0, 200, 255, 0.025),
+            0 0 0 210px rgba(0, 200, 255, 0.018);
 
-            width: 650px;
-            height: 650px;
+        pointer-events: none;
+    }
 
-            right: -220px;
-            top: 80px;
+    .hero-content {
+        position: relative;
+        z-index: 2;
 
-            border-radius: 50%;
+        max-width: 1050px;
+        margin: auto;
+    }
 
-            border: 1px solid rgba(0, 200, 255, 0.18);
+    .hero-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
 
-            box-shadow:
-                0 0 0 70px rgba(0, 200, 255, 0.035),
-                0 0 0 140px rgba(0, 200, 255, 0.025),
-                0 0 0 210px rgba(0, 200, 255, 0.018);
+        padding: 8px 16px;
+        margin-bottom: 24px;
 
-            pointer-events: none;
-        }
+        border: 1px solid rgba(0, 200, 255, 0.35);
 
-        .hero-content {
-            position: relative;
-            z-index: 2;
+        border-radius: 30px;
 
-            max-width: 1050px;
-            margin: auto;
-        }
+        background: rgba(0, 200, 255, 0.08);
 
-        .hero-tag {
-            display: inline-flex;
-            align-items: center;
-            gap: 9px;
+        color: #63dcff;
 
-            padding: 8px 16px;
-            margin-bottom: 24px;
+        font-size: 13px;
+        font-weight: 600;
 
-            border: 1px solid rgba(0, 200, 255, 0.35);
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+    }
 
-            border-radius: 30px;
+    .hero-tag::before {
+        content: "";
 
-            background: rgba(0, 200, 255, 0.08);
+        width: 7px;
+        height: 7px;
 
-            color: #63dcff;
+        border-radius: 50%;
 
-            font-size: 13px;
-            font-weight: 600;
+        background: #00c8ff;
 
-            letter-spacing: 1.2px;
-            text-transform: uppercase;
-        }
+        box-shadow:
+            0 0 10px rgba(0, 200, 255, 0.9);
+    }
 
-        .hero-tag::before {
-            content: "";
+    .hero h1 {
+        font-size: clamp(45px, 6vw, 76px);
 
-            width: 7px;
-            height: 7px;
+        line-height: 1.08;
 
-            border-radius: 50%;
+        margin-bottom: 24px;
 
-            background: #00c8ff;
+        font-weight: 700;
 
-            box-shadow:
-                0 0 10px rgba(0, 200, 255, 0.9);
-        }
+        letter-spacing: -1.5px;
+    }
 
-        .hero h1 {
-            font-size: clamp(45px, 6vw, 76px);
+    .hero h1 span {
+        display: block;
+        color: #00c8ff;
+    }
 
-            line-height: 1.08;
+    .hero h2 {
+        font-size: clamp(20px, 2.4vw, 30px);
 
-            margin-bottom: 24px;
+        line-height: 1.4;
 
-            font-weight: 700;
+        font-weight: 300;
 
-            letter-spacing: -1.5px;
-        }
+        color: #e8f7ff;
 
-        .hero h1 span {
-            display: block;
-            color: #00c8ff;
-        }
+        margin-bottom: 24px;
+    }
 
-        .hero h2 {
-            font-size: clamp(20px, 2.4vw, 30px);
+    .hero p {
+        max-width: 850px;
 
-            line-height: 1.4;
+        margin: auto;
 
-            font-weight: 300;
+        color: #c9d9e8;
 
-            color: #e8f7ff;
+        font-size: 18px;
 
-            margin-bottom: 24px;
-        }
+        line-height: 1.75;
+    }
 
-        .hero p {
-            max-width: 850px;
+    .hero-buttons {
+        display: flex;
 
-            margin: auto;
+        justify-content: center;
+        align-items: center;
 
-            color: #c9d9e8;
+        gap: 15px;
 
-            font-size: 18px;
+        margin-top: 34px;
 
-            line-height: 1.75;
-        }
+        flex-wrap: wrap;
+    }
 
-        .hero-buttons {
-            display: flex;
+    .hero-btn-primary {
+        display: inline-flex;
 
-            justify-content: center;
-            align-items: center;
+        align-items: center;
+        justify-content: center;
 
-            gap: 15px;
+        padding: 14px 28px;
 
-            margin-top: 34px;
+        background: #00b8f2;
 
-            flex-wrap: wrap;
-        }
+        color: #ffffff;
 
-        .hero-btn-primary {
-            display: inline-flex;
+        border-radius: 8px;
 
-            align-items: center;
-            justify-content: center;
+        font-weight: 600;
 
-            padding: 14px 28px;
+        transition: all 0.3s ease;
 
-            background: #00b8f2;
+        box-shadow:
+            0 8px 25px rgba(0, 184, 242, 0.22);
+    }
 
-            color: #ffffff;
+    .hero-btn-primary:hover {
+        background: #00a6dc;
 
-            border-radius: 8px;
+        transform: translateY(-3px);
 
-            font-weight: 600;
+        box-shadow:
+            0 12px 30px rgba(0, 184, 242, 0.35);
+    }
 
-            transition: all 0.3s ease;
+    .hero-btn-secondary {
+        display: inline-flex;
 
-            box-shadow:
-                0 8px 25px rgba(0, 184, 242, 0.22);
-        }
+        align-items: center;
+        justify-content: center;
 
-        .hero-btn-primary:hover {
-            background: #00a6dc;
+        padding: 13px 28px;
 
-            transform: translateY(-3px);
+        border: 1px solid rgba(255, 255, 255, 0.35);
 
-            box-shadow:
-                0 12px 30px rgba(0, 184, 242, 0.35);
-        }
+        color: #ffffff;
 
-        .hero-btn-secondary {
-            display: inline-flex;
+        border-radius: 8px;
 
-            align-items: center;
-            justify-content: center;
+        font-weight: 600;
 
-            padding: 13px 28px;
+        background: rgba(255, 255, 255, 0.05);
 
-            border: 1px solid rgba(255, 255, 255, 0.35);
+        transition: all 0.3s ease;
+    }
 
-            color: #ffffff;
+    .hero-btn-secondary:hover {
+        background: rgba(255, 255, 255, 0.12);
 
-            border-radius: 8px;
+        border-color: rgba(255, 255, 255, 0.6);
 
-            font-weight: 600;
+        transform: translateY(-3px);
+    }
 
-            background: rgba(255, 255, 255, 0.05);
+    .hero-tech {
+        margin-top: 55px;
 
-            transition: all 0.3s ease;
-        }
+        display: flex;
 
-        .hero-btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.12);
+        justify-content: center;
+        align-items: center;
 
-            border-color: rgba(255, 255, 255, 0.6);
+        gap: 12px;
 
-            transform: translateY(-3px);
-        }
+        flex-wrap: wrap;
 
-        .hero-tech {
-            margin-top: 55px;
+        color: #a9c1d4;
 
-            display: flex;
+        font-size: 13px;
 
-            justify-content: center;
-            align-items: center;
+        letter-spacing: 0.5px;
+    }
 
-            gap: 12px;
+    .hero-tech span {
+        padding: 6px 11px;
 
-            flex-wrap: wrap;
+        border-radius: 20px;
 
-            color: #a9c1d4;
+        background: rgba(255, 255, 255, 0.06);
 
-            font-size: 13px;
+        border: 1px solid rgba(255, 255, 255, 0.10);
+    }
 
-            letter-spacing: 0.5px;
-        }
 
-        .hero-tech span {
-            padding: 6px 11px;
+    /* =========================================================
+       COMMON SECTION
+    ========================================================= */
 
-            border-radius: 20px;
+    section {
+        padding: 90px 0;
+    }
 
-            background: rgba(255, 255, 255, 0.06);
+    .section-title {
+        text-align: center;
 
-            border: 1px solid rgba(255, 255, 255, 0.10);
-        }
+        color: #041c42;
 
+        font-size: 34px;
 
-        /* =========================================================
-           COMMON SECTION
-        ========================================================= */
+        font-weight: 700;
 
-        section {
-            padding: 90px 0;
-        }
+        margin-bottom: 55px;
 
-        .section-title {
-            text-align: center;
+        position: relative;
+    }
 
-            color: #041c42;
+    .section-title::after {
+        content: "";
 
-            font-size: 34px;
+        display: block;
 
-            font-weight: 700;
+        width: 55px;
 
-            margin-bottom: 55px;
+        height: 3px;
 
-            position: relative;
-        }
+        background: #00b8f2;
 
-        .section-title::after {
-            content: "";
+        margin: 14px auto 0;
 
-            display: block;
+        border-radius: 5px;
+    }
 
-            width: 55px;
 
-            height: 3px;
+    /* =========================================================
+       ABOUT
+    ========================================================= */
 
-            background: #00b8f2;
+    .about-section {
+        background: #ffffff;
+    }
 
-            margin: 14px auto 0;
+    .about-grid {
+        max-width: 1050px;
 
-            border-radius: 5px;
-        }
+        margin: auto;
 
+        display: grid;
 
-        /* =========================================================
-           ABOUT
-        ========================================================= */
+        grid-template-columns: 1fr 1fr;
 
-        .about-section {
-            background: #ffffff;
+        gap: 55px;
+
+        align-items: center;
+    }
+
+    .about-content h3 {
+        color: #041c42;
+
+        font-size: 27px;
+
+        margin-bottom: 18px;
+    }
+
+    .about-content p {
+        color: #667085;
+
+        font-size: 16px;
+
+        line-height: 1.8;
+
+        margin-bottom: 15px;
+    }
+
+    .about-highlights {
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 15px;
+    }
+
+    .highlight-box {
+        padding: 22px;
+
+        border-radius: 12px;
+
+        background: #f8fafc;
+
+        border: 1px solid #e5ebf2;
+
+        transition: all 0.3s ease;
+    }
+
+    .highlight-box:hover {
+        transform: translateY(-4px);
+
+        border-color: #bde8f6;
+
+        box-shadow:
+            0 10px 25px
+            rgba(4, 28, 66, 0.08);
+    }
+
+    .highlight-box strong {
+        display: block;
+
+        color: #041c42;
+
+        font-size: 20px;
+
+        margin-bottom: 5px;
+    }
+
+    .highlight-box span {
+        color: #667085;
+
+        font-size: 14px;
+    }
+
+
+    /* =========================================================
+       SERVICES
+    ========================================================= */
+
+    .services-section {
+        background: #f8fafc;
+    }
+
+    .section-subtitle {
+        max-width: 750px;
+
+        margin: -25px auto 45px;
+
+        text-align: center;
+
+        color: #667085;
+
+        font-size: 17px;
+
+        line-height: 1.7;
+    }
+
+    .services-grid {
+        display: grid;
+
+        grid-template-columns:
+            repeat(4, 1fr);
+
+        gap: 24px;
+
+        max-width: 1150px;
+
+        margin: auto;
+    }
+
+    .service-card {
+        position: relative;
+
+        background: #ffffff;
+
+        padding: 32px 25px;
+
+        min-height: 275px;
+
+        border-radius: 15px;
+
+        border: 1px solid #e5ebf2;
+
+        box-shadow:
+            0 6px 20px
+            rgba(4, 28, 66, 0.06);
+
+        text-align: center;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: flex-start;
+
+        transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease,
+            border-color 0.3s ease;
+
+        overflow: hidden;
+    }
+
+    .service-card::before {
+        content: "";
+
+        position: absolute;
+
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 3px;
+
+        background: #00b8f2;
+
+        transform: scaleX(0.3);
+
+        transition: 0.3s ease;
+    }
+
+    .service-card:hover {
+        transform: translateY(-7px);
+
+        border-color: #bde8f6;
+
+        box-shadow:
+            0 15px 32px
+            rgba(4, 28, 66, 0.12);
+    }
+
+    .service-card:hover::before {
+        transform: scaleX(1);
+    }
+
+    .service-icon {
+        width: 64px;
+        height: 64px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        margin-bottom: 20px;
+
+        border-radius: 16px;
+
+        background: #eaf8fd;
+
+        color: #009fd4;
+
+        transition: all 0.3s ease;
+    }
+
+    .service-icon svg {
+        width: 34px;
+        height: 34px;
+
+        fill: none;
+
+        stroke: currentColor;
+
+        stroke-width: 1.8;
+
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+
+    .service-card:hover .service-icon {
+        transform: scale(1.08);
+
+        background: #dff5fc;
+
+        color: #007fae;
+    }
+
+    .service-card h3 {
+        color: #041c42;
+
+        font-size: 18px;
+
+        line-height: 1.35;
+
+        margin-bottom: 12px;
+
+        font-weight: 650;
+    }
+
+    .service-card p {
+        color: #667085;
+
+        font-size: 14px;
+
+        line-height: 1.6;
+
+        max-width: 245px;
+    }
+
+
+    /* =========================================================
+       CONTACT
+    ========================================================= */
+
+    .contact-section {
+        background:
+            linear-gradient(
+                135deg,
+                #041c42,
+                #063d70
+            );
+
+        color: #ffffff;
+    }
+
+    .contact-section .section-title {
+        color: #ffffff;
+    }
+
+    .contact-grid {
+        max-width: 1000px;
+
+        margin: auto;
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: 25px;
+    }
+
+    .contact-card {
+        background:
+            rgba(255, 255, 255, 0.06);
+
+        border: 1px solid
+            rgba(255, 255, 255, 0.12);
+
+        border-radius: 14px;
+
+        padding: 30px 22px;
+
+        text-align: center;
+
+        transition: all 0.3s ease;
+    }
+
+    .contact-card:hover {
+        transform: translateY(-5px);
+
+        background:
+            rgba(255, 255, 255, 0.09);
+
+        border-color:
+            rgba(0, 200, 255, 0.4);
+    }
+
+    .contact-icon {
+        width: 52px;
+        height: 52px;
+
+        margin: 0 auto 16px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 50%;
+
+        background:
+            rgba(0, 200, 255, 0.12);
+
+        color: #55d9ff;
+    }
+
+    .contact-icon svg {
+        width: 25px;
+        height: 25px;
+
+        fill: none;
+
+        stroke: currentColor;
+
+        stroke-width: 1.8;
+
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+
+    .contact-card h3 {
+        font-size: 17px;
+
+        margin-bottom: 9px;
+    }
+
+    .contact-card p {
+        color: #c8d9e8;
+
+        font-size: 14px;
+
+        line-height: 1.6;
+    }
+
+    .contact-card a {
+        color: #c8f2ff;
+
+        word-break: break-word;
+    }
+
+    .contact-card a:hover {
+        color: #00c8ff;
+    }
+
+
+    /* =========================================================
+       WHATSAPP
+    ========================================================= */
+
+    .whatsapp-button {
+        position: fixed;
+
+        right: 24px;
+        bottom: 24px;
+
+        width: 58px;
+        height: 58px;
+
+        border-radius: 50%;
+
+        background: #25d366;
+
+        color: #ffffff;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        box-shadow:
+            0 8px 25px
+            rgba(0, 0, 0, 0.20);
+
+        z-index: 999;
+
+        transition: all 0.3s ease;
+    }
+
+    .whatsapp-button:hover {
+        transform: scale(1.1);
+
+        box-shadow:
+            0 12px 30px
+            rgba(37, 211, 102, 0.35);
+    }
+
+    .whatsapp-button svg {
+        width: 30px;
+        height: 30px;
+
+        fill: currentColor;
+    }
+
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    footer {
+        background: #02152f;
+
+        color: #9fb1c4;
+
+        text-align: center;
+
+        padding: 24px 15px;
+
+        font-size: 13px;
+    }
+
+    footer strong {
+        color: #dceaf5;
+    }
+
+
+    /* =========================================================
+       TABLET
+    ========================================================= */
+
+    @media (max-width: 1000px) {
+
+        .services-grid {
+            grid-template-columns:
+                repeat(2, 1fr);
         }
 
         .about-grid {
-            max-width: 1050px;
+            grid-template-columns: 1fr;
 
-            margin: auto;
+            gap: 35px;
+        }
+    }
 
-            display: grid;
 
-            grid-template-columns: 1fr 1fr;
+    /* =========================================================
+       MOBILE
+    ========================================================= */
 
-            gap: 55px;
+    @media (max-width: 768px) {
 
-            align-items: center;
+        .navbar {
+            height: 68px;
         }
 
-        .about-content h3 {
-            color: #041c42;
-
-            font-size: 27px;
-
-            margin-bottom: 18px;
+        .nav-container {
+            width: 94%;
         }
 
-        .about-content p {
-            color: #667085;
-
-            font-size: 16px;
-
-            line-height: 1.8;
-
-            margin-bottom: 15px;
+        .logo img {
+            width: 145px;
         }
 
-        .about-highlights {
-            display: grid;
-
-            grid-template-columns:
-                repeat(2, 1fr);
-
-            gap: 15px;
+        .nav {
+            gap: 12px;
         }
 
-        .highlight-box {
-            padding: 22px;
-
-            border-radius: 12px;
-
-            background: #f8fafc;
-
-            border: 1px solid #e5ebf2;
-
-            transition: all 0.3s ease;
-        }
-
-        .highlight-box:hover {
-            transform: translateY(-4px);
-
-            border-color: #bde8f6;
-
-            box-shadow:
-                0 10px 25px
-                rgba(4, 28, 66, 0.08);
-        }
-
-        .highlight-box strong {
-            display: block;
-
-            color: #041c42;
-
-            font-size: 20px;
-
-            margin-bottom: 5px;
-        }
-
-        .highlight-box span {
-            color: #667085;
-
-            font-size: 14px;
-        }
-
-
-        /* =========================================================
-           SERVICES
-        ========================================================= */
-
-        .services-section {
-            background: #f8fafc;
-        }
-
-        .section-subtitle {
-            max-width: 750px;
-
-            margin: -25px auto 45px;
-
-            text-align: center;
-
-            color: #667085;
-
-            font-size: 17px;
-
-            line-height: 1.7;
-        }
-
-        .services-grid {
-            display: grid;
-
-            grid-template-columns:
-                repeat(4, 1fr);
-
-            gap: 24px;
-
-            max-width: 1150px;
-
-            margin: auto;
-        }
-
-        .service-card {
-            position: relative;
-
-            background: #ffffff;
-
-            padding: 32px 25px;
-
-            min-height: 275px;
-
-            border-radius: 15px;
-
-            border: 1px solid #e5ebf2;
-
-            box-shadow:
-                0 6px 20px
-                rgba(4, 28, 66, 0.06);
-
-            text-align: center;
-
-            display: flex;
-
-            flex-direction: column;
-
-            align-items: center;
-
-            justify-content: flex-start;
-
-            transition:
-                transform 0.3s ease,
-                box-shadow 0.3s ease,
-                border-color 0.3s ease;
-
-            overflow: hidden;
-        }
-
-        .service-card::before {
-            content: "";
-
-            position: absolute;
-
-            top: 0;
-            left: 0;
-
-            width: 100%;
-            height: 3px;
-
-            background: #00b8f2;
-
-            transform: scaleX(0.3);
-
-            transition: 0.3s ease;
-        }
-
-        .service-card:hover {
-            transform: translateY(-7px);
-
-            border-color: #bde8f6;
-
-            box-shadow:
-                0 15px 32px
-                rgba(4, 28, 66, 0.12);
-        }
-
-        .service-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .service-icon {
-            width: 64px;
-            height: 64px;
-
-            display: flex;
-
-            align-items: center;
-            justify-content: center;
-
-            margin-bottom: 20px;
-
-            border-radius: 16px;
-
-            background: #eaf8fd;
-
-            color: #009fd4;
-
-            transition: all 0.3s ease;
-        }
-
-        .service-icon svg {
-            width: 34px;
-            height: 34px;
-
-            fill: none;
-
-            stroke: currentColor;
-
-            stroke-width: 1.8;
-
-            stroke-linecap: round;
-            stroke-linejoin: round;
-        }
-
-        .service-card:hover .service-icon {
-            transform: scale(1.08);
-
-            background: #dff5fc;
-
-            color: #007fae;
-        }
-
-        .service-card h3 {
-            color: #041c42;
-
-            font-size: 18px;
-
-            line-height: 1.35;
-
-            margin-bottom: 12px;
-
-            font-weight: 650;
-        }
-
-        .service-card p {
-            color: #667085;
-
-            font-size: 14px;
-
-            line-height: 1.6;
-
-            max-width: 245px;
-        }
-
-
-        /* =========================================================
-           CONTACT
-        ========================================================= */
-
-        .contact-section {
-            background:
-                linear-gradient(
-                    135deg,
-                    #041c42,
-                    #063d70
-                );
-
-            color: #ffffff;
-        }
-
-        .contact-section .section-title {
-            color: #ffffff;
-        }
-
-        .contact-grid {
-            max-width: 1000px;
-
-            margin: auto;
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(3, 1fr);
-
-            gap: 25px;
-        }
-
-        .contact-card {
-            background:
-                rgba(255, 255, 255, 0.06);
-
-            border: 1px solid
-                rgba(255, 255, 255, 0.12);
-
-            border-radius: 14px;
-
-            padding: 30px 22px;
-
-            text-align: center;
-
-            transition: all 0.3s ease;
-        }
-
-        .contact-card:hover {
-            transform: translateY(-5px);
-
-            background:
-                rgba(255, 255, 255, 0.09);
-
-            border-color:
-                rgba(0, 200, 255, 0.4);
-        }
-
-        .contact-icon {
-            width: 52px;
-            height: 52px;
-
-            margin: 0 auto 16px;
-
-            display: flex;
-
-            align-items: center;
-            justify-content: center;
-
-            border-radius: 50%;
-
-            background:
-                rgba(0, 200, 255, 0.12);
-
-            color: #55d9ff;
-        }
-
-        .contact-icon svg {
-            width: 25px;
-            height: 25px;
-
-            fill: none;
-
-            stroke: currentColor;
-
-            stroke-width: 1.8;
-
-            stroke-linecap: round;
-            stroke-linejoin: round;
-        }
-
-        .contact-card h3 {
-            font-size: 17px;
-
-            margin-bottom: 9px;
-        }
-
-        .contact-card p {
-            color: #c8d9e8;
-
-            font-size: 14px;
-
-            line-height: 1.6;
-        }
-
-        .contact-card a {
-            color: #c8f2ff;
-
-            word-break: break-word;
-        }
-
-        .contact-card a:hover {
-            color: #00c8ff;
-        }
-
-
-        /* =========================================================
-           WHATSAPP BUTTON
-        ========================================================= */
-
-        .whatsapp-button {
-            position: fixed;
-
-            right: 24px;
-            bottom: 24px;
-
-            width: 58px;
-            height: 58px;
-
-            border-radius: 50%;
-
-            background: #25d366;
-
-            color: #ffffff;
-
-            display: flex;
-
-            align-items: center;
-            justify-content: center;
-
-            box-shadow:
-                0 8px 25px
-                rgba(0, 0, 0, 0.20);
-
-            z-index: 999;
-
-            transition: all 0.3s ease;
-        }
-
-        .whatsapp-button:hover {
-            transform: scale(1.1);
-
-            box-shadow:
-                0 12px 30px
-                rgba(37, 211, 102, 0.35);
-        }
-
-        .whatsapp-button svg {
-            width: 30px;
-            height: 30px;
-
-            fill: currentColor;
-        }
-
-
-        /* =========================================================
-           FOOTER
-        ========================================================= */
-
-        footer {
-            background: #02152f;
-
-            color: #9fb1c4;
-
-            text-align: center;
-
-            padding: 24px 15px;
-
+        .nav a {
             font-size: 13px;
         }
 
-        footer strong {
-            color: #dceaf5;
+        .hero {
+            min-height: 90vh;
+
+            padding:
+                125px 20px 70px;
         }
 
-
-        /* =========================================================
-           TABLET
-        ========================================================= */
-
-        @media (max-width: 1000px) {
-
-            .services-grid {
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
-
-            .about-grid {
-                grid-template-columns: 1fr;
-
-                gap: 35px;
-            }
+        .hero h1 {
+            letter-spacing: -0.8px;
         }
 
-
-        /* =========================================================
-           MOBILE
-        ========================================================= */
-
-        @media (max-width: 768px) {
-
-            .navbar {
-                height: 68px;
-            }
-
-            .nav-container {
-                width: 92%;
-            }
-
-            .logo img {
-                width: 145px;
-            }
-
-            .nav {
-                gap: 14px;
-            }
-
-            .nav a {
-                font-size: 13px;
-            }
-
-            .hero {
-                min-height: 90vh;
-
-                padding:
-                    125px 20px 70px;
-            }
-
-            .hero h1 {
-                letter-spacing: -0.8px;
-            }
-
-            .hero p {
-                font-size: 16px;
-            }
-
-            .hero-buttons {
-                flex-direction: column;
-            }
-
-            .hero-btn-primary,
-            .hero-btn-secondary {
-                width: 220px;
-            }
-
-            .hero-tech {
-                margin-top: 40px;
-            }
-
-            .contact-grid {
-                grid-template-columns: 1fr;
-
-                max-width: 500px;
-            }
-
-            section {
-                padding: 70px 0;
-            }
-
-            .section-title {
-                font-size: 30px;
-
-                margin-bottom: 45px;
-            }
+        .hero p {
+            font-size: 16px;
         }
 
-
-        /* =========================================================
-           SMALL MOBILE
-        ========================================================= */
-
-        @media (max-width: 600px) {
-
-            .nav {
-                gap: 10px;
-            }
-
-            .nav a {
-                font-size: 12px;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .service-card {
-                min-height: auto;
-
-                padding: 30px 25px;
-            }
-
-            .section-subtitle {
-                font-size: 16px;
-
-                margin-bottom: 35px;
-
-                padding: 0 10px;
-            }
-
-            .about-highlights {
-                grid-template-columns: 1fr;
-            }
-
-            .whatsapp-button {
-                width: 52px;
-                height: 52px;
-
-                right: 18px;
-                bottom: 18px;
-            }
+        .hero-buttons {
+            flex-direction: column;
         }
 
-
-        /* =========================================================
-           VERY SMALL SCREEN
-        ========================================================= */
-
-        @media (max-width: 450px) {
-
-            .nav {
-                gap: 8px;
-            }
-
-            .nav a {
-                font-size: 11px;
-            }
-
-            .logo img {
-                width: 125px;
-            }
-
-            .hero h1 {
-                font-size: 42px;
-            }
-
-            .hero h2 {
-                font-size: 19px;
-            }
+        .hero-btn-primary,
+        .hero-btn-secondary {
+            width: 220px;
         }
 
-    </style>
+        .hero-tech {
+            margin-top: 40px;
+        }
+
+        .contact-grid {
+            grid-template-columns: 1fr;
+
+            max-width: 500px;
+        }
+
+        section {
+            padding: 70px 0;
+        }
+
+        .section-title {
+            font-size: 30px;
+
+            margin-bottom: 45px;
+        }
+    }
+
+
+    /* =========================================================
+       SMALL MOBILE
+    ========================================================= */
+
+    @media (max-width: 600px) {
+
+        .nav {
+            gap: 9px;
+        }
+
+        .nav a {
+            font-size: 12px;
+        }
+
+        .services-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .service-card {
+            min-height: auto;
+
+            padding: 30px 25px;
+        }
+
+        .section-subtitle {
+            font-size: 16px;
+
+            margin-bottom: 35px;
+
+            padding: 0 10px;
+        }
+
+        .about-highlights {
+            grid-template-columns: 1fr;
+        }
+
+        .whatsapp-button {
+            width: 52px;
+            height: 52px;
+
+            right: 18px;
+            bottom: 18px;
+        }
+    }
+
+
+    /* =========================================================
+       VERY SMALL SCREEN
+    ========================================================= */
+
+    @media (max-width: 450px) {
+
+        .nav {
+            gap: 7px;
+        }
+
+        .nav a {
+            font-size: 11px;
+        }
+
+        .logo img {
+            width: 125px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+        }
+
+        .hero h2 {
+            font-size: 19px;
+        }
+    }
+
+</style>
+```
 
 </head>
 
-
 <body>
 
+```
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
 
-    <!-- =========================================================
-         NAVIGATION
-    ========================================================= -->
+<header class="navbar">
 
-    <header class="navbar">
+    <div class="nav-container">
 
-        <div class="nav-container">
+        <a
+            href="#home"
+            class="logo"
+            aria-label="TeleArena Cellular Services Home"
+        >
 
-            <a href="#home" class="logo">
+            <img
+                src="logo.png"
+                alt="TeleArena Cellular Services logo"
+                width="175"
+                height="auto"
+            >
 
-                <img
-                    src="logo.png"
-                    alt="TeleArena Cellular Services"
-                >
-
-            </a>
-
-
-            <nav class="nav">
-
-                <a href="#home">
-                    Home
-                </a>
-
-                <a href="#about">
-                    About
-                </a>
-
-                <a href="#services">
-                    Services
-                </a>
-
-                <a href="#contact">
-                    Contact
-                </a>
-
-            </nav>
-
-        </div>
-
-    </header>
+        </a>
 
 
+        <nav
+            class="nav"
+            aria-label="Main navigation"
+        >
 
-    <!-- =========================================================
-         HERO
-    ========================================================= -->
+            <a href="#home">Home</a>
 
-    <section id="home" class="hero">
+            <a href="#about">About</a>
+
+            <a href="#services">Services</a>
+
+            <a href="#contact">Contact</a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<main>
+
+    <section
+        id="home"
+        class="hero"
+        aria-labelledby="hero-title"
+    >
 
         <div class="hero-content">
 
-
             <div class="hero-tag">
-
                 5G &amp; Wireless Engineering
-
             </div>
 
 
-            <h1>
+            <h1 id="hero-title">
 
                 TeleArena
 
@@ -1117,9 +1205,7 @@
 
 
             <h2>
-
                 LTE • 5G NR • IoT • Device Validation • Automation
-
             </h2>
 
 
@@ -1153,22 +1239,19 @@
             </div>
 
 
-            <div class="hero-tech">
+            <div
+                class="hero-tech"
+                aria-label="Technology expertise"
+            >
 
                 <span>LTE</span>
-
                 <span>5G NR</span>
-
                 <span>NB-IoT</span>
-
                 <span>LTE-M</span>
-
                 <span>RF Testing</span>
-
                 <span>Automation</span>
 
             </div>
-
 
         </div>
 
@@ -1176,19 +1259,22 @@
 
 
 
-    <!-- =========================================================
+    <!-- =====================================================
          ABOUT
-    ========================================================= -->
+    ===================================================== -->
 
     <section
         id="about"
         class="about-section"
+        aria-labelledby="about-title"
     >
 
         <div class="container">
 
-
-            <h2 class="section-title">
+            <h2
+                id="about-title"
+                class="section-title"
+            >
                 About TeleArena
             </h2>
 
@@ -1205,32 +1291,26 @@
 
 
                     <p>
-
                         TeleArena Cellular Services provides
                         specialized telecom testing and validation
                         solutions across LTE, 5G NR, IoT and
                         wireless technologies.
-
                     </p>
 
 
                     <p>
-
                         Our expertise covers device testing,
                         protocol validation, log analysis,
                         RF testing, field testing and Python-based
                         automation.
-
                     </p>
 
 
                     <p>
-
                         We focus on improving product quality,
                         test coverage, reliability and execution
                         efficiency throughout the development
                         and validation lifecycle.
-
                     </p>
 
                 </div>
@@ -1241,9 +1321,7 @@
 
                     <div class="highlight-box">
 
-                        <strong>
-                            LTE
-                        </strong>
+                        <strong>LTE</strong>
 
                         <span>
                             Protocol &amp; Device Testing
@@ -1254,9 +1332,7 @@
 
                     <div class="highlight-box">
 
-                        <strong>
-                            5G NR
-                        </strong>
+                        <strong>5G NR</strong>
 
                         <span>
                             Validation &amp; Troubleshooting
@@ -1267,9 +1343,7 @@
 
                     <div class="highlight-box">
 
-                        <strong>
-                            IoT
-                        </strong>
+                        <strong>IoT</strong>
 
                         <span>
                             NB-IoT &amp; LTE-M Testing
@@ -1280,9 +1354,7 @@
 
                     <div class="highlight-box">
 
-                        <strong>
-                            Python
-                        </strong>
+                        <strong>Python</strong>
 
                         <span>
                             Test Automation Frameworks
@@ -1301,19 +1373,23 @@
 
 
 
-    <!-- =========================================================
+    <!-- =====================================================
          SERVICES
-    ========================================================= -->
+    ===================================================== -->
 
     <section
         id="services"
         class="services-section"
+        aria-labelledby="services-title"
     >
 
         <div class="container">
 
 
-            <h2 class="section-title">
+            <h2
+                id="services-title"
+                class="section-title"
+            >
                 Our Services
             </h2>
 
@@ -1329,13 +1405,14 @@
             <div class="services-grid">
 
 
-                <!-- =================================================
-                     SERVICE 1
-                ================================================= -->
+                <!-- SERVICE 1 -->
 
-                <div class="service-card">
+                <article class="service-card">
 
-                    <div class="service-icon">
+                    <div
+                        class="service-icon"
+                        aria-hidden="true"
+                    >
 
                         <svg viewBox="0 0 24 24">
 
@@ -1371,23 +1448,22 @@
 
 
                     <p>
-
                         Comprehensive validation of mobile devices,
                         features, connectivity and network behaviour.
-
                     </p>
 
-                </div>
+                </article>
 
 
 
-                <!-- =================================================
-                     SERVICE 2
-                ================================================= -->
+                <!-- SERVICE 2 -->
 
-                <div class="service-card">
+                <article class="service-card">
 
-                    <div class="service-icon">
+                    <div
+                        class="service-icon"
+                        aria-hidden="true"
+                    >
 
                         <svg viewBox="0 0 24 24">
 
@@ -1410,23 +1486,22 @@
 
 
                     <p>
-
                         Functional and stability testing of new LTE,
                         5G and device-specific features.
-
                     </p>
 
-                </div>
+                </article>
 
 
 
-                <!-- =================================================
-                     SERVICE 3
-                ================================================= -->
+                <!-- SERVICE 3 -->
 
-                <div class="service-card">
+                <article class="service-card">
 
-                    <div class="service-icon">
+                    <div
+                        class="service-icon"
+                        aria-hidden="true"
+                    >
 
                         <svg viewBox="0 0 24 24">
 
@@ -1469,23 +1544,22 @@
 
 
                     <p>
-
                         Python-based automation frameworks designed
                         to improve test coverage and execution efficiency.
-
                     </p>
 
-                </div>
+                </article>
 
 
 
-                <!-- =================================================
-                     SERVICE 4
-                ================================================= -->
+                <!-- SERVICE 4 -->
 
-                <div class="service-card">
+                <article class="service-card">
 
-                    <div class="service-icon">
+                    <div
+                        class="service-icon"
+                        aria-hidden="true"
+                    >
 
                         <svg viewBox="0 0 24 24">
 
@@ -1516,23 +1590,22 @@
 
 
                     <p>
-
                         Protocol validation, call flow analysis
                         and troubleshooting across 4G and 5G networks.
-
                     </p>
 
-                </div>
+                </article>
 
 
 
-                <!-- =================================================
-                     SERVICE 5
-                ================================================= -->
+                <!-- SERVICE 5 -->
 
-                <div class="service-card">
+                <article class="service-card">
 
-                    <div class="service-icon">
+                    <div
+                        class="service-icon"
+                        aria-hidden="true"
+                    >
 
                         <svg viewBox="0 0 24 24">
 
@@ -1579,23 +1652,22 @@
 
 
                     <p>
-
                         Detailed analysis of modem and network logs
                         to identify failures, performance issues and root causes.
-
                     </p>
 
-                </div>
+                </article>
 
 
 
-                <!-- =================================================
-                     SERVICE 6
-                ================================================= -->
+                <!-- SERVICE 6 -->
 
-                <div class="service-card">
+                <article class="service-card">
 
-                    <div class="service-icon">
+                    <div
+                        class="service-icon"
+                        aria-hidden="true"
+                    >
 
                         <svg viewBox="0 0 24 24">
 
@@ -1634,23 +1706,22 @@
 
 
                     <p>
-
                         Real-world network validation, coverage
                         analysis, performance testing and issue reproduction.
-
                     </p>
 
-                </div>
+                </article>
 
 
 
-                <!-- =================================================
-                     SERVICE 7
-                ================================================= -->
+                <!-- SERVICE 7 -->
 
-                <div class="service-card">
+                <article class="service-card">
 
-                    <div class="service-icon">
+                    <div
+                        class="service-icon"
+                        aria-hidden="true"
+                    >
 
                         <svg viewBox="0 0 24 24">
 
@@ -1683,23 +1754,22 @@
 
 
                     <p>
-
                         RF measurements and coverage assessment
                         to evaluate network quality and performance.
-
                     </p>
 
-                </div>
+                </article>
 
 
 
-                <!-- =================================================
-                     SERVICE 8
-                ================================================= -->
+                <!-- SERVICE 8 -->
 
-                <div class="service-card">
+                <article class="service-card">
 
-                    <div class="service-icon">
+                    <div
+                        class="service-icon"
+                        aria-hidden="true"
+                    >
 
                         <svg viewBox="0 0 24 24">
 
@@ -1736,13 +1806,11 @@
 
 
                     <p>
-
                         Validation of IoT devices and cellular
                         technologies including NB-IoT and LTE-M.
-
                     </p>
 
-                </div>
+                </article>
 
 
             </div>
@@ -1753,19 +1821,23 @@
 
 
 
-    <!-- =========================================================
+    <!-- =====================================================
          CONTACT
-    ========================================================= -->
+    ===================================================== -->
 
     <section
         id="contact"
         class="contact-section"
+        aria-labelledby="contact-title"
     >
 
         <div class="container">
 
 
-            <h2 class="section-title">
+            <h2
+                id="contact-title"
+                class="section-title"
+            >
                 Contact Us
             </h2>
 
@@ -1777,7 +1849,10 @@
 
                 <div class="contact-card">
 
-                    <div class="contact-icon">
+                    <div
+                        class="contact-icon"
+                        aria-hidden="true"
+                    >
 
                         <svg viewBox="0 0 24 24">
 
@@ -1809,8 +1884,9 @@
 
                         <a
                             href="tel:+918888833622"
+                            aria-label="Call TeleArena Cellular Services"
                         >
-                            +91 8888833622
+                            +91 88888 33622
                         </a>
 
                     </p>
@@ -1823,7 +1899,10 @@
 
                 <div class="contact-card">
 
-                    <div class="contact-icon">
+                    <div
+                        class="contact-icon"
+                        aria-hidden="true"
+                    >
 
                         <svg viewBox="0 0 24 24">
 
@@ -1853,6 +1932,7 @@
 
                         <a
                             href="mailto:info@telearena.in"
+                            aria-label="Email TeleArena Cellular Services"
                         >
                             info@telearena.in
                         </a>
@@ -1867,7 +1947,10 @@
 
                 <div class="contact-card">
 
-                    <div class="contact-icon">
+                    <div
+                        class="contact-icon"
+                        aria-hidden="true"
+                    >
 
                         <svg viewBox="0 0 24 24">
 
@@ -1894,9 +1977,9 @@
 
                     <p>
 
-                        PLOT NO. 3/1, FLAT NO. 2
-                        KANAN RESIDENCY,
-                        RAHATANI, PUNE,
+                        Plot No. 3/1, Flat No. 2,
+                        Kanan Residency,<br>
+                        Rahatani, Pune,<br>
                         Maharashtra, India – 411017
 
                     </p>
@@ -1910,80 +1993,82 @@
 
     </section>
 
+</main>
 
 
-    <!-- =========================================================
-         WHATSAPP
-    ========================================================= -->
 
-    <a
-        href="https://wa.me/918888833622"
-        class="whatsapp-button"
-        target="_blank"
-        rel="noopener"
-        aria-label="Contact TeleArena on WhatsApp"
+<!-- =========================================================
+     WHATSAPP
+========================================================= -->
+
+<a
+    href="https://wa.me/918888833622"
+    class="whatsapp-button"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contact TeleArena Cellular Services on WhatsApp"
+    title="Chat with TeleArena on WhatsApp"
+>
+
+    <svg
+        viewBox="0 0 24 24"
+        aria-hidden="true"
     >
 
-        <svg viewBox="0 0 24 24">
+        <path
+            d="M20.52 3.48A11.86 11.86 0 0 0 12.05 0
+            C5.5 0 .17 5.33.17 11.88
+            c0 2.09.55 4.13 1.6 5.93L.1 24
+            l6.35-1.65a11.88 11.88 0 0 0
+            5.6 1.42h.01c6.55 0
+            11.88-5.33 11.88-11.88
+            0-3.17-1.24-6.15-3.42-8.41z
+            M12.06 21.77h-.01
+            a9.85 9.85 0 0 1-5.02-1.38
+            l-.36-.21-3.77.98
+            1.01-3.68-.23-.38
+            a9.84 9.84 0 1 1 8.38 4.67z
+            M17.47 14.39c-.3-.15-1.78-.88-2.05-.98
+            -.27-.1-.47-.15-.67.15
+            -.2.3-.77.98-.94 1.18
+            -.17.2-.35.22-.65.07
+            -.3-.15-1.26-.46-2.4-1.48
+            -.89-.79-1.49-1.76-1.66-2.06
+            -.17-.3-.02-.46.13-.61
+            .13-.13.3-.35.45-.52
+            .15-.17.2-.3.2-.5
+            .1-.2.05-.37-.02-.52
+            -.07-.15-.67-1.62-.92-2.22
+            -.24-.58-.49-.5-.67-.51
+            h-.57c-.2 0-.52.07-.79.37
+            -.27.3-1.04 1.02-1.04 2.49
+            0 1.47 1.07 2.89 1.22 3.09
+            .15.2 2.1 3.2 5.09 4.49
+            .71.31 1.27.5 1.7.64
+            .72.23 1.37.2 1.89.12
+            .58-.09 1.78-.73 2.03-1.43
+            .25-.7.25-1.3.17-1.43
+            -.07-.13-.27-.2-.57-.35z"
+        ></path>
 
-            <path
-                d="M20.52 3.48A11.86 11.86 0 0 0 12.05 0
-                C5.5 0 .17 5.33.17 11.88
-                c0 2.09.55 4.13 1.6 5.93L.1 24
-                l6.35-1.65a11.88 11.88 0 0 0
-                5.6 1.42h.01c6.55 0
-                11.88-5.33 11.88-11.88
-                0-3.17-1.24-6.15-3.42-8.41z
-                M12.06 21.77h-.01
-                a9.85 9.85 0 0 1-5.02-1.38
-                l-.36-.21-3.77.98
-                1.01-3.68-.23-.38
-                a9.84 9.84 0 1 1 8.38 4.67z
-                M17.47 14.39c-.3-.15-1.78-.88-2.05-.98
-                -.27-.1-.47-.15-.67.15
-                -.2.3-.77.98-.94 1.18
-                -.17.2-.35.22-.65.07
-                -.3-.15-1.26-.46-2.4-1.48
-                -.89-.79-1.49-1.76-1.66-2.06
-                -.17-.3-.02-.46.13-.61
-                .13-.13.3-.35.45-.52
-                .15-.17.2-.3.2-.5
-                .1-.2.05-.37-.02-.52
-                -.07-.15-.67-1.62-.92-2.22
-                -.24-.58-.49-.5-.67-.51
-                h-.57c-.2 0-.52.07-.79.37
-                -.27.3-1.04 1.02-1.04 2.49
-                0 1.47 1.07 2.89 1.22 3.09
-                .15.2 2.1 3.2 5.09 4.49
-                .71.31 1.27.5 1.7.64
-                .72.23 1.37.2 1.89.12
-                .58-.09 1.78-.73 2.03-1.43
-                .25-.7.25-1.3.17-1.43
-                -.07-.13-.27-.2-.57-.35z"
-            ></path>
+    </svg>
 
-        </svg>
-
-    </a>
+</a>
 
 
 
-    <!-- =========================================================
-         FOOTER
-    ========================================================= -->
+<!-- =========================================================
+     FOOTER
+========================================================= -->
 
-    <footer>
+<footer>
 
-        © 2026
+    © 2026
+    <strong>TeleArena Cellular Services</strong>.
+    All Rights Reserved.
 
-        <strong>
-            TeleArena Cellular Services
-        </strong>
-
-        . All Rights Reserved.
-
-    </footer>
-
+</footer>
+```
 
 </body>
 
