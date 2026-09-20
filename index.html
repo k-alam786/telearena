@@ -1164,6 +1164,8 @@
 
             <a href="#services">Services</a>
 
+            <a href="#careers">Careers</a>
+
             <a href="#contact">Contact</a>
 
         </nav>
@@ -1370,6 +1372,142 @@
         </div>
 
     </section>
+
+
+
+
+    <!-- =====================================================
+         EXPERTISE
+    ===================================================== -->
+
+    
+    <!-- =====================================================
+         TECHNOLOGY EXPERTISE
+    ===================================================== -->
+
+    
+    <!-- =====================================================
+         ENGINEERING CAPABILITIES
+    ===================================================== -->
+
+    <section
+        id="expertise"
+        class="services-section"
+        aria-labelledby="expertise-title"
+    >
+
+        <div class="container">
+
+            <h2
+                id="expertise-title"
+                class="section-title"
+            >
+                Engineering Capabilities
+            </h2>
+
+            <p class="section-subtitle">
+                A practical engineering approach focused on quality,
+                reliability and efficient product validation.
+            </p>
+
+            <div class="services-grid">
+
+                <article class="service-card">
+
+                    <div class="service-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M4 5h16v14H4z"></path>
+                            <path d="M8 9h8"></path>
+                            <path d="M8 13h5"></path>
+                            <path d="M8 17h3"></path>
+                        </svg>
+                    </div>
+
+                    <h3>End-to-End Validation</h3>
+
+                    <p>
+                        Complete validation across different stages of
+                        product and system development.
+                    </p>
+
+                </article>
+
+
+                <article class="service-card">
+
+                    <div class="service-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M4 19V5"></path>
+                            <path d="M4 19h16"></path>
+                            <path d="M7 15l3-4 3 2 5-7"></path>
+                        </svg>
+                    </div>
+
+                    <h3>Quality Engineering</h3>
+
+                    <p>
+                        Structured test planning, execution and analysis
+                        focused on product quality and reliability.
+                    </p>
+
+                </article>
+
+
+                <article class="service-card">
+
+                    <div class="service-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M8 7V4"></path>
+                            <path d="M16 7V4"></path>
+                            <path d="M8 20v-3"></path>
+                            <path d="M16 20v-3"></path>
+                            <rect x="5" y="7" width="14" height="10" rx="2"></rect>
+                            <path d="M9 11h6"></path>
+                            <path d="M9 14h4"></path>
+                        </svg>
+                    </div>
+
+                    <h3>Automation &amp; Efficiency</h3>
+
+                    <p>
+                        Automation-driven approaches to reduce repetitive
+                        effort and improve testing efficiency.
+                    </p>
+
+                </article>
+
+
+                <article class="service-card">
+
+                    <div class="service-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="11" cy="11" r="6"></circle>
+                            <path d="m16 16 4 4"></path>
+                            <path d="M8.5 11h5"></path>
+                            <path d="M11 8.5v5"></path>
+                        </svg>
+                    </div>
+
+                    <h3>Issue Analysis &amp; Troubleshooting</h3>
+
+                    <p>
+                        Systematic analysis to identify issues, isolate
+                        problems and support faster resolution.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
 
 
 
@@ -1701,7 +1839,7 @@
 
 
                     <h3>
-                        Field Test &amp; Drive Test
+                        Field Test
                     </h3>
 
 
@@ -1818,6 +1956,65 @@
         </div>
 
     </section>
+    <!-- =====================================================
+         CAREERS
+    ===================================================== -->
+
+    <section
+        id="careers"
+        class="about-section"
+        aria-labelledby="careers-title"
+    >
+
+        <div class="container">
+
+            <h2
+                id="careers-title"
+                class="section-title"
+            >
+                Careers
+            </h2>
+
+            <p class="section-subtitle">
+                Join TeleArena and be part of our growing team in
+                cellular and wireless technology.
+            </p>
+
+            <div
+                style="
+                    max-width: 850px;
+                    margin: 0 auto;
+                    text-align: center;
+                "
+            >
+
+                <p
+                    style="
+                        color: #667085;
+                        font-size: 16px;
+                        line-height: 1.8;
+                        margin-bottom: 25px;
+                    "
+                >
+                    We welcome professionals and aspiring talent who are
+                    interested in telecom testing, wireless technology,
+                    validation and test automation.
+                </p>
+
+                <a
+                    href="mailto:info@telearena.in?subject=Career%20Opportunity%20at%20TeleArena"
+                    class="hero-btn-primary"
+                    style="display:inline-flex;"
+                >
+                    Send Your Resume
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
 
 
 
@@ -2063,12 +2260,16 @@
 
 <footer>
 
-    © 2026
+    © <span id="current-year">2026</span>
     <strong>TeleArena Cellular Services</strong>.
     All Rights Reserved.
 
 </footer>
 ```
+
+<script>
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+</script>
 
 </body>
 
