@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-```
+
 <!-- =========================================================
      PRIMARY SEO
 ========================================================= -->
@@ -119,7 +119,7 @@
 
     html {
         scroll-behavior: smooth;
-        scroll-padding-top: 76px;
+        scroll-padding-top: 90px;
     }
 
     body {
@@ -1121,14 +1121,190 @@
         }
     }
 
+
+    /* =========================================================
+       RESPONSIVE OVERFLOW & MOBILE HEADER FIX
+    ========================================================= */
+
+    html,
+    body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .navbar,
+    .nav-container,
+    .hero,
+    .hero-content,
+    .container,
+    .services-grid,
+    .contact-grid {
+        max-width: 100%;
+    }
+
+    .nav-container {
+        min-width: 0;
+    }
+
+    .logo {
+        min-width: 0;
+    }
+
+    .logo img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .hero {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .hero-content {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .hero h1,
+    .hero h2,
+    .hero p {
+        overflow-wrap: anywhere;
+    }
+
+    .services-grid,
+    .contact-grid {
+        width: 100%;
+    }
+
+    @media (max-width: 768px) {
+
+        .navbar {
+            height: auto;
+            min-height: 68px;
+        }
+
+        .nav-container {
+            width: 94%;
+            min-height: 68px;
+            height: auto;
+            padding: 8px 0;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            flex: 0 0 auto;
+        }
+
+        .logo img {
+            width: 135px;
+        }
+
+        .nav {
+            max-width: 100%;
+            flex: 1 1 auto;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+            gap: 8px 12px;
+        }
+
+        .nav a {
+            font-size: 12px;
+            white-space: nowrap;
+        }
+
+        .hero {
+            width: 100%;
+            min-height: 760px;
+            padding: 145px 18px 70px;
+            background-position: center center;
+            background-size: cover;
+        }
+
+        .hero::before {
+            right: -360px;
+        }
+
+        .hero-content {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .hero h1 {
+            font-size: clamp(38px, 11vw, 58px);
+            letter-spacing: -0.8px;
+        }
+
+        .hero h2 {
+            font-size: clamp(18px, 5vw, 24px);
+        }
+
+        .hero p {
+            font-size: 16px;
+        }
+
+        .hero-tech {
+            gap: 8px;
+        }
+
+        .services-grid {
+            grid-template-columns: 1fr;
+            width: 100%;
+        }
+
+        .contact-grid {
+            grid-template-columns: 1fr;
+            width: 100%;
+        }
+
+        .service-card,
+        .contact-card {
+            width: 100%;
+            min-width: 0;
+        }
+    }
+
+    @media (max-width: 450px) {
+
+        .nav-container {
+            width: 94%;
+        }
+
+        .logo img {
+            width: 125px;
+        }
+
+        .nav {
+            gap: 6px 9px;
+        }
+
+        .nav a {
+            font-size: 11px;
+        }
+
+        .hero {
+            padding-top: 130px;
+            min-height: 720px;
+            background-position: 50% 50%;
+        }
+
+        .hero h1 {
+            font-size: clamp(36px, 11vw, 48px);
+        }
+
+        .hero h2 {
+            font-size: 18px;
+        }
+    }
+
 </style>
-```
+
 
 </head>
 
 <body>
 
-```
+
 <!-- =========================================================
      NAVIGATION
 ========================================================= -->
@@ -2265,7 +2441,7 @@
     All Rights Reserved.
 
 </footer>
-```
+
 
 <script>
     document.getElementById("current-year").textContent = new Date().getFullYear();
